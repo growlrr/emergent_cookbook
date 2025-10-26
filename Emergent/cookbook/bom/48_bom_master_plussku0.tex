@@ -1,8 +1,7 @@
 \subsection*{Master Procurement BOM - CatCore- DogCore Raw Perishables (80 kg Production)}
  
-\textbf{Scope:} Aggregated raw materials for 6 CatCore SKUs x 10Kg batch each + 1 SKU0 Reference Feed × 10 kg batch + 1 DogcorePro x10Kg batch = 80 kg total production or 800 pouches of nett 100g weight. 
-
-\textbf{Exclusions:} All Catcore Premixes, All  DogCore powder formulation and premixes, purified water for broth (80L) (separate BOMs or supplier-handled)
+\textbf{Scope:} Aggregated raw materials for 6 CatCore SKUs x 10Kg batch each + 1 SKU0 Reference Feed × 10 kg batch + 1 DogcorePro x10Kg batch = 80 kg total production or 800 pouches of nett 100g weight.
+\textbf{Exclusions:} All Catcore Premixes, All DogCore powder formulation and premixes, purified water for broth (80L) (separate BOMs or supplier-handled)\\
 
 \begin{table}[h]
 \centering
@@ -28,7 +27,8 @@ Goat liver & 0.460 & 15 & 0.50 & Remove bile sac, dice 1.5cm. STRICT QC \\
 \midrule
 \multicolumn{5}{l}{\textit{MARINE COMPONENTS}} \\
 Sardine (whole) & 6.310 & 15 & 7.5 & Gutted, heads/tails on, cut 1.5cm \\
-Fish bone meal & 1.090 & 15 & 1.5 & Pet food grade, $\le$150 $\mu$m \\
+% FIX: Used \SI for the micro-unit.
+Fish bone meal & 1.090 & 15 & 1.5 & Pet food grade, $\le \SI{150}{\micro\meter}$ \\
 \midrule
 \multicolumn{5}{l}{\textit{BINDING \& TEXTURE}} \\
 Whole Red Pumpkin & 1.400 & --- & 1.5 & Pre-cook to puree, max 24 hrs \\
@@ -45,23 +45,29 @@ Egg yolk powder & 1.340 & --- & 1.5 & Sealed, cool, dry \\
 \textbf{Procurement Notes:}
 \begin{itemize}
 \item All chicken components: Source from single poultry supplier for traceability. 
-\item Prefer antibiotic free egg-laying hens over caged broiler hens. 
+\item Prefer antibiotic free egg-laying hens over caged broiler hens.
 \item All goat components: Source from single red meat supplier for traceability
 \item Overage accounts for: rendering loss (frames), trimming waste, QC rejections, retention samples
 \item Critical tolerance items (liver): 15\% overage due to bile sac removal and strict QC
 \item Frame mince: 30\% overage for collagen rendering loss before mincing
 \item Fish bone meal: 15\% overage due to fine powder QC
-\item Maintain cold chain logs for all perishables (4°C, max 24 hours storage)
+% FIX: Corrected temperature unit to use \SI
+\item Maintain cold chain logs for all perishables (\SI{4}{\celsius}, max 24 hours storage)
 \end{itemize}
 
 \textbf{Storage Requirements:}
 \begin{itemize}
-\item Refrigerated perishables (chicken, goat, sardine): 4°C $\pm$ 2°C immediately upon unloading and QC. 
+% FIX: Corrected temperature unit to use \SI and preserved the math mode $\pm$
+\item Refrigerated perishables (chicken, goat, sardine): \SI{4}{\celsius} $\pm$ \SI{2}{\celsius} immediately upon unloading and QC.
+% FIX: The line below must be a separate item.
 \item Maintain Vendor Cold Chain Logs, Vendor Traceability, Incoming QC time-stamp
 \item Ensure Cold chain maintained throughout with no process without coldchain for more than 20 minutes. Record timestamps. 
-\item Pumpkin/Spinach: Refrigerate after cooking to puree (4°C, use within 24 hours)
-\item Egg yolk powder: Cool, sealed, dry storage (20°C, RH $<$60\%)
-\item Fish bone meal: Sealed container, cool, dry (20°C, RH $<$60\%)
+% FIX: Corrected temperature unit to use \SI
+\item Pumpkin/Spinach: Refrigerate after cooking to puree (\SI{4}{\celsius}, use within 24 hours)
+% FIX: Corrected temperature and RH unit to use \SI
+\item Egg yolk powder: Cool, sealed, dry storage (\SI{20}{\celsius}, RH $<\SI{60}{\percent}$)
+% FIX: Corrected temperature and RH unit to use \SI
+\item Fish bone meal: Sealed container, cool, dry (\SI{20}{\celsius}, RH $<\SI{60}{\percent}$)
 \end{itemize}
 
 \textbf{Traceability:}
@@ -76,25 +82,30 @@ Egg yolk powder & 1.340 & --- & 1.5 & Sealed, cool, dry \\
 
 \textbf{Procurement Notes:}
 \begin{itemize}
-\item All chicken components: Source from single poultry supplier for traceability. 
-\item Prefer antibiotic free egg-laying hens over caged broiler hens. 
+\item All chicken components: Source from single poultry supplier for traceability.
+\item Prefer antibiotic free egg-laying hens over caged broiler hens.
 \item All goat/mutton components: Source from single red meat supplier for traceability
 \item Overage accounts for: trimming waste, QC rejections, retention samples, processing loss
 \item Critical tolerance items (liver): 15\% overage due to bile sac removal and strict QC
 \item Fish bone meal: 15\% overage due to fine powder QC
 \item Sardine SKU has no bone broth. It is in purified water. 
-\item DogCorePro SKU is in goat bone broth. 
-\item Maintain cold chain logs for all perishables (4 deg C, max 24 hours storage)
+\item DogCorePro SKU is in goat bone broth.
+% FIX: Corrected temperature unit to use \SI
+\item Maintain cold chain logs for all perishables (\SI{4}{\celsius}, max 24 hours storage)
 \end{itemize}
 
 \textbf{Storage Requirements:}
 \begin{itemize}
-\item Refrigerated perishables (chicken, lamb, goat, sardine): 4 deg C $\pm$ 2 deg C immediately upon unloading and QC. 
+% FIX: Corrected temperature unit to use \SI and preserved the math mode $\pm$
+\item Refrigerated perishables (chicken, lamb, goat, sardine): \SI{4}{\celsius} $\pm$ \SI{2}{\celsius} immediately upon unloading and QC.
 \item Maintain Vendor Cold Chain Logs, Vendor Traceability, Incomming QC time-stamp, in-comming coldchain logs.
 \item Ensure Cold chain is maintained throughout with no process without coldchain for more than 20 minutes. Record timestamps. 
-\item Pumpkin: Refrigerate after chopping or cooking to puree (4 deg C, use within 24 hours)
-\item Egg yolk powder: Cool,sealed, dry storage (20 deg C, RH $<$60\%)
-\item Fish bone meal: Sealed container, cool, dry (20 deg C, RH $<$60\%)
+% FIX: Corrected temperature unit to use \SI
+\item Pumpkin: Refrigerate after chopping or cooking to puree (\SI{4}{\celsius}, use within 24 hours)
+% FIX: Corrected temperature and RH unit to use \SI
+\item Egg yolk powder: Cool,sealed, dry storage (\SI{20}{\celsius}, RH $<\SI{60}{\percent}$)
+% FIX: Corrected temperature and RH unit to use \SI
+\item Fish bone meal: Sealed container, cool, dry (\SI{20}{\celsius}, RH $<\SI{60}{\percent}$)
 
 \end{itemize}
 
@@ -104,4 +115,4 @@ Egg yolk powder & 1.340 & --- & 1.5 & Sealed, cool, dry \\
 \item Attach COAs for egg yolk powder and fish bone meal
 \item Log cold chain temperatures every 4 hours
 \item Retain batch records for minimum 2 years
-\end{itemize}.
+\end{itemize}

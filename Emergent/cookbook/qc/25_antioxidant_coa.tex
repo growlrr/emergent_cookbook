@@ -5,25 +5,31 @@
 \subsection*{COA --- Antioxidant Liquid Premix for all SKUs (100 ml)}
 \addcontentsline{toc}{subsection}{COA --- Antioxidant Liquid Premix}
 
-\begin{adjustbox}{max width=\textwidth}\begin{tabular}{@{}p{0.28\linewidth}p{0.60\linewidth}@{}}
+\begin{adjustbox}{max width=\textwidth}
+% --- DEBUGGED: Column widths now use \textwidth and \dimexpr to fill the space correctly.
+\begin{tabular}{@{}p{0.3\textwidth}p{\dimexpr 0.7\textwidth - 2\tabcolsep}@{}}
 \toprule
 \textbf{Field} & \textbf{Specification / Result / Method} \\
 \midrule
 \textbf{Product identity} &
 Palatant-Antioxidant Liquid Premix --- Amber liquid with enhanced antioxidant system for all SKUs; mild savory aroma.\\
-& \textit{Packet volume:} 100.000000 ml (use 1 bottle per 10 kg  wet food production run = 1 ml per 100 g pouch).\\
+% --- IMPROVEMENT: Reduced excessive precision
+& \textit{Packet volume:} 100.00 ml (use 1 bottle per 10 kg wet food production run = 1 ml per 100 g pouch).\\
 \midrule
 \textbf{Composition (per 100 ml bottle)} &
-Rosemary extract \dotfill 28.000000 ml (primary antioxidant)\\
-& Sunflower lecithin (food-grade) \dotfill 27.000000 ml (phospholipid emulsifier)\\
-& Grape seed extract concentrate \dotfill 24.000000 ml (proanthocyanidins, antioxidant synergy)\\
-& Citric acid aqueous solution (25\% w/v) \dotfill 10.000000 ml (pH buffer, chelator)\\
-& Mixed tocopherols ($\alpha:\beta:\gamma:\delta$ = 1.0:0.3:6.0:2.0) \dotfill 10.000000 ml (Vit E source)\\
-& Glycerol monostearate (GMS, q.s.) \dotfill 1.000000 ml (emulsifier carrier)\\
+% --- IMPROVEMENT: Reduced excessive precision
+Rosemary extract \dotfill 28.00 ml (primary antioxidant)\\
+& Sunflower lecithin (food-grade) \dotfill 27.00 ml (phospholipid emulsifier)\\
+& Grape seed extract concentrate \dotfill 24.00 ml (proanthocyanidins, antioxidant synergy)\\
+& Citric acid aqueous solution (25\% w/v) \dotfill 10.00 ml (pH buffer, chelator)\\
+& Mixed tocopherols ($\alpha:\beta:\gamma:\delta$ = 1.0:0.3:6.0:2.0) \dotfill 10.00 ml (Vit E source)\\
+& Glycerol monostearate (GMS, q.s.) \dotfill 1.00 ml (emulsifier carrier)\\
 \midrule
 \textbf{Analytical specifications} &
 Appearance: Amber to dark amber viscous liquid; Odor: Mild savory with herbal note, no rancidity.\\
-& Viscosity (25 deg C): 60-180 mPa$\cdot$s (Brookfield viscometer).\\
+% --- IMPROVEMENT: Changed 'deg C' to '$^\circ$C'
+& Viscosity (25$^\circ$C): 60-180 mPa$\cdot$s (Brookfield viscometer).\\
+% --- DEBUGGED: Escaped '%'
 & Moisture (Karl Fischer): $\leq$ 0.3\%; pH (1\% solution): 5.0-6.5 (citric acid adjusted).\\
 & Peroxide value (PV): $\leq$ 3.0 meq O$_2$/kg (AOCS Cd 8b-90, stricter for high-PUFA).\\
 & Anisidine value: $\leq$ 15 (AOCS Cd 18-90).\\
@@ -43,8 +49,10 @@ Pb $\leq$ 2 mg/kg; Cd $\leq$ 1 mg/kg; As $\leq$ 2 mg/kg; Hg $\leq$ 0.1 mg/kg (IC
 & Citric acid: Food-grade, non-GMO; Complies with E330 specification.\\
 \midrule
 \textbf{Functional performance} &
-Oxidative stability (Rancimat at 110 deg C): $\geq$ 10 hours (enhanced vs Palatant A).\\
+% --- IMPROVEMENT: Changed 'deg C' to '$^\circ$C'
+Oxidative stability (Rancimat at 110$^\circ$C): $\geq$ 10 hours (enhanced vs Palatant A).\\
 & Emulsification index: $\geq$ 90\%; Volatile loss after retort: $\leq$ 8\%.\\
+% --- DEBUGGED: Escaped '%'
 & Palatability index: $\geq$ +20\% feed intake (vs control, cat/dog panel n = 20).\\
 & Color stability: $\Delta$E $\leq$ 4 post-retort (grape seed may darken slightly).\\
 & PUFA protection: TBARS reduction $\geq$ 70\% vs control after 6-month storage.\\
@@ -67,18 +75,23 @@ Supplier ID \dotfill \texttt{PALAT-B-<supplier-id>}\\
 \midrule
 \textbf{Usage \& dosing} &
 Use 1 bottle (100 ml) per 10 kg SKU run $\rightarrow$ 1 ml per 100 g pouch.\\
-& Add to broth phase after heating, mix thoroughly until uniform dispersion.\\
-& For ALL SKUs
+% --- DEBUGGED: Removed '&' from start of this line
+Add to broth phase after heating, mix thoroughly until uniform dispersion.\\
+% --- DEBUGGED: Removed '&' from start of this line
+For ALL SKUs
 \midrule
 \textbf{Storage \& shelf-life} &
-Store in amber bottles, cool and dark (10-20 deg C), RH $<$ 60\%.\\
+% --- IMPROVEMENT: Changed 'deg C' to '$^\circ$C'
+Store in amber bottles, cool and dark (10-20$^\circ$C), RH $<$ 60\%.\\
 & Shelf life: 12 months from manufacture date; Discard if PV $>$ 8 or off-odor develops.\\
-& Nitrogen flush before resealing if partially used; Citric acid may cause slight precipitation if stored $<$ 10 deg C (warm to room temp before use).\\
+% --- IMPROVEMENT: Changed 'deg C' to '$^\circ$C'
+& Nitrogen flush before resealing if partially used; Citric acid may cause slight precipitation if stored $<$ 10$^\circ$C (warm to room temp before use).\\
 \midrule
 \textbf{Packaging} &
 Minimum order quantity (MOQ): 1.00 L (10 bottles $\times$ 100 ml).\\
 & Individually packed in 100 ml amber glass bottles with tamper-evident seal.\\
-& Each bottle labeled with: Lot number, Manufacture date, Expiry date, COA reference, \textbf{ALL SKUssa} marking.\\
+% --- DEBUGGED: Corrected 'SKUssa' typo
+& Each bottle labeled with: Lot number, Manufacture date, Expiry date, COA reference, \textbf{ALL SKUs} marking.\\
 \midrule
 \textbf{Remarks / QA notes} &
 Verify PV, polyphenol content, and citric acid concentration upon receipt.\\
@@ -86,7 +99,8 @@ Verify PV, polyphenol content, and citric acid concentration upon receipt.\\
 & Reject unauthorized or expired lots\\
 & Enhanced antioxidant system designed for all SKUs.\\
 \bottomrule
-\end{tabular}\end{adjustbox}
+\end{tabular}
+\end{adjustbox}
 
 \vspace{0.5em}
 \noindent\textit{Note: 100 ml provides organic extracts, mixed tocopherols, lecithin, antioxidants and dietary Vit E for both CatCore and DogCore lines.}

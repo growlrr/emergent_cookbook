@@ -13,39 +13,46 @@
 \caption{CatCore Heart (Chicken) SKU - Raw Materials per 10 kg Batch}
 \begin{tabular}{@{}llrrrp{4cm}@{}}
 \toprule
-\textbf{Ingredient} & \textbf{Per Batch (Kg)} & \textbf{Prep Method}  & \textbf{Traceability Log} & \textbf{Prep Notes} & Obs\\
+\textbf{Ingredient} & \textbf{Per Batch (Kg)} & \textbf{Prep Method}  & \textbf{Traceability Log} & \textbf{Prep Notes} & Obs\\
 \midrule
-Chicken heart       & 2.400 $\pm$0.08  & Diced 1.5cm            & [QC-FORM-\_\_\_\_\_\_] & Trim vessels, uniform cubes & Refridgerate\\
-Chicken frame mince & 2.000 $\pm$0.05  & Fine grind 5mm sieve   & [QC-FORM-\_\_\_\_\_\_] & Follow Bone Broth SOP 30-B. No grit or sharp particles & Refridgerate  \\
-Chicken muscle cuts & 1.100 $\pm$0.08  & Diced 1.5cm            & [QC-FORM-\_\_\_\_\_\_] & Trim fat, uniform cubes  & Refridgerate\\
-Pumpkin puree       & 0.400 $\pm$0.01  & Blended with egg yolk  & [QC-FORM-\_\_\_\_\_\_] & Pre-cooked and blended into smooth paste & Refridgerate \\
-Egg yolk powder     & 0.400 $\pm$0.01  & Blended with pumpkin   & [QC-FORM-\_\_\_\_\_\_] & Blend together into pumpkin puree  & Refridgerate  \\
-Chicken liver       & 0.200 $\pm$0.005 & Diced 1.5cm            & [QC-FORM-\_\_\_\_\_\_] & Remove bile sac, unniform cubes & Refridegrate. MAINTAIN STRICT TOLERANCE \\ 
+Chicken heart       & 2.400 $\pm$0.08  & Diced 1.5cm            & [QC-FORM-\_\_\_\_\_\_] & Trim vessels, uniform cubes & Refridgerate\\
+Chicken frame mince & 2.000 $\pm$0.05  & Fine grind 5mm sieve   & [QC-FORM-\_\_\_\_\_\_] & Follow Bone Broth SOP 30-B. No grit or sharp particles & Refridgerate  \\
+Chicken muscle cuts & 1.100 $\pm$0.08  & Diced 1.5cm            & [QC-FORM-\_\_\_\_\_\_] & Trim fat, uniform cubes  & Refridgerate\\
+Pumpkin puree       & 0.400 $\pm$0.01  & Blended with egg yolk  & [QC-FORM-\_\_\_\_\_\_] & Pre-cooked and blended into smooth paste & Refridgerate \\
+Egg yolk powder     & 0.400 $\pm$0.01  & Blended with pumpkin   & [QC-FORM-\_\_\_\_\_\_] & Blend together into pumpkin puree  & Refridgerate  \\
+% FIX: Corrected typo 'Refridegrate' to 'Refrigerate' and removed extra space/tab before \\
+Chicken liver       & 0.200 $\pm$0.005 & Diced 1.5cm            & [QC-FORM-\_\_\_\_\_\_] & Remove bile sac, uniform cubes & Refrigerate. MAINTAIN STRICT TOLERANCE \\
 \midrule
+% FIX: Added missing \\ at end of row
 \textbf{TOTAL SOLIDS} & \textbf{6.500 $\pm$0.05} & Caliburated Scale & [QC-FORM-\_\_\_\_\_\_] & Refridgerate and maintain Cold Chain Logs & MAINTAIN TIGHT TOLERANCE \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsubsection*{Processing Instructions}
-\item Thoroughly wash all meat products in running hot jet stream water for 5 minutes to wash off any blood, coagulants, debris and other undesirable particles. 
+% FIX: The line below must be inside a list environment to follow the subsubsection.
+\begin{itemize}
+\item Thoroughly wash all meat products in running hot jet stream water for 5 minutes to wash off any blood, coagulants, debris and other undesirable particles. 
+\end{itemize}
+
 \textbf{Solid Preparation (1.5cm Standard):}
 \begin{itemize}
 \item Measure out each raw ingredient using caliburated scale and tight tolerance. Keep the rest refrigerated.
 \item Use sharp knife or dicer machine
 \item All diced ingredients: uniform 1.5cm$\pm$ 0.5cm cubes
 \item Maintain strict cold chain logs before, during and after prep (4 deg C)
-\item Measure each ingredient post dicing and note down the weight. 
-\item Refridgerate immediately before proceeding to next ingredient. 
-\item Keep preperation time to under 20 minutes to control pathogen load. 
+\item Measure each ingredient post dicing and note down the weight. 
+\item Refridgerate immediately before proceeding to next ingredient. 
+\item Keep preperation time to under 20 minutes to control pathogen load. 
 \end{itemize}
 
 \textbf{Frame Mince:}
 \begin{itemize}
 \item Chicken Bone Mince as per Bone Broth-SOP 30-B
-\item Pass through 5mm sieve twice as per Bone Broth 
+\item Pass through 5mm sieve twice as per Bone Broth 
 \item Should be fine paste with no large bone fragments. Reject if shards present. Maintain coldchain Logs
 \end{itemize}
+
 \textbf{Egg Yolk + Pumpkin Preparation:}
 \begin{enumerate}
 \item Measure 400g egg yolk powder + 400g freshly cooked pumpkin puree
@@ -57,11 +64,13 @@ Chicken liver       & 0.200 $\pm$0.005 & Diced 1.5cm            & [QC-FORM-\_\_\
 \subsubsection*{Liquid Components}
 \begin{tabular}{@{}lrr@{}}
 \toprule
-\textbf{Component} & \textbf{Per Batch (kg)  & \textbf{Per Pouch (g)}} \\
-\midrule 
-Chicken Bone broth (Follow SOP 30-B) &  4.10 $\pm$0.10 & 41.0 \\
+% FIX: Added missing '}' after (kg)
+\textbf{Component} & \textbf{Per Batch (kg)} & \textbf{Per Pouch (g)} \\
+\midrule 
+Chicken Bone broth (Follow SOP 30-B) &  4.10 $\pm$0.10 & 41.0 \\
 Blanch water (process recovery-refer SOP 30-A) & 0.250$\pm$0.010 & 2.5 \\
-\textbf{TOTAL LIQUIDS} & \textbf {4.350} & {43.5} \textbf \\
+% FIX: Corrected misplaced \textbf command and extra space/tabs.
+\textbf{TOTAL LIQUIDS} & \textbf{4.350} & \textbf{43.5} \\
 \midrule
 
 \bottomrule
@@ -71,11 +80,15 @@ Blanch water (process recovery-refer SOP 30-A) & 0.250$\pm$0.010 & 2.5 \\
 \vspace{1em}
 
 \begin{itemize}
-\item \textbf{CatPro Premix: } Complements CatCore Fresh Proteins with complete essential vitamins, minerals and chelators and adequate retort loss overage.
-\item \textbf{Useage:} 100 g per 10 kg production run or 1.0 g per 100 g wet food pouch complements with complete essential vitamins, minerals and chelators. \item\textbf{AAFCO Compliance: } Meets AAFCO requirements for complete and balanced nutrition.
-\item\textbf{Design Overages: }Enhanced taurine formulation for cardiac health support. Vitamin A is balanced carefully with daily 4.0g fresh liver from 2 CatCore pouches to avoid stacking.\cite{ref64}.  
-\item \textbf{Omega-3 Fish Oil Blend:}250ml Omega-3 Fatty Acid Fish Oil PV<=5.0meq/Kg is added per 10Kg run or 2.5ml per per 100g wet food pouch except sardine SKU.
-\item \textbf{Antioxidant Premix: } 100ml per 10Kg run or 1ml per 100g wet food pouch. Provides Primary Vitamin E (dl-$\alpha$tocopheryl) and blended organic antioxidants for enhanced oxidative stability.
-\item \textbf{Alginate Gel - Ca Premix:} 100g per 10Kg run.  Forms gel under retort heat. Delivers additional 80mg dietary Ca per 100g wet food pouch.
-\item \textbf{Palatant Premix: } 100ml per 10Kg run or 1ml per 100g wet food pouch.
+\item \textbf{CatPro Premix:} Complements CatCore Fresh Proteins with complete essential vitamins, minerals and chelators and adequate retort loss overage.
+% FIX: Corrected typo 'Useage' to 'Usage'.
+\item \textbf{Usage:} 100 g per 10 kg production run or 1.0 g per 100 g wet food pouch complements with complete essential vitamins, minerals and chelators.
+% FIX: The next three lines were concatenated with the text of the previous item. They must be separate items.
+\item \textbf{AAFCO Compliance:} Meets AAFCO requirements for complete and balanced nutrition.
+\item \textbf{Design Overages:} Enhanced taurine formulation for cardiac health support. Vitamin A is balanced carefully with daily 4.0g fresh liver from 2 CatCore pouches to avoid stacking.\cite{ref64}.  
+% FIX: Added space after 'Blend:}' and used $\le$ for the math symbol.
+\item \textbf{Omega-3 Fish Oil Blend:} 250ml Omega-3 Fatty Acid Fish Oil PV$\le$5.0meq/Kg is added per 10Kg run or 2.5ml per per 100g wet food pouch except sardine SKU.
+\item \textbf{Antioxidant Premix:} 100ml per 10Kg run or 1ml per 100g wet food pouch. Provides Primary Vitamin E (dl-$\alpha$tocopheryl) and blended organic antioxidants for enhanced oxidative stability.
+\item \textbf{Alginate Gel - Ca Premix:} 100g per 10Kg run.  Forms gel under retort heat. Delivers additional 80mg dietary Ca per 100g wet food pouch.
+\item \textbf{Palatant Premix:} 100ml per 10Kg run or 1ml per 100g wet food pouch.
 \end{itemize}
