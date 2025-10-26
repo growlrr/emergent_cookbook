@@ -1,0 +1,28 @@
+% Suggested filename: 50_bottommeat_DogPro_Back_Label.tex
+\documentclass[10pt]{standalone}
+\usepackage[paperwidth=100mm,paperheight=100mm,margin=6mm]{geometry}
+\usepackage{fontspec}\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}\setmathfont{TeX Gyre Pagella Math}
+\usepackage{xcolor,tikz,tabularx}
+\pagestyle{empty}\renewcommand{\familydefault}{\sfdefault}
+\definecolor{dogprogold}{rgb}{0.95,0.61,0.07}
+\colorlet{bandcolor}{dogprogold}
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[white] (0,0) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,92mm) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,0) rectangle (100mm,8mm);
+  \node[anchor=north,font=\sffamily\bfseries\large] at (50mm,98mm){Growlrr DogCore --- DogPro Blend};
+  \node[anchor=north,align=center,text width=88mm,font=\sffamily\small] at (50mm,86mm) {
+    \textbf{Guaranteed Analysis (per 100 g)}\\[4pt] Energy / Protein / Fat / Fiber / Moisture --- see recipe appendix.
+  };
+  \node[anchor=north,align=left,text width=88mm,font=\sffamily\footnotesize] at (50mm,58mm) {
+    \textbf{Ingredients (per pouch = 100 g):}\\[3pt]
+    [DogCore protein base --- human-grade], Bone Broth (X g), Egg Yolk Powder (Y g), Vegetable inclusions (pumpkin, sweet potato optionally), Encapsulated Ca-lactate (Pluto avg dosing), Brewer's yeast (carrier ----- 640 mg), Tocopherols, Premix (DogPro), Alginate if used.
+  };
+  \node[anchor=north,align=center,text width=86mm,font=\sffamily\tiny] at (50mm,28mm) {
+    Pair with 150 g cooked rice + 100 g unsweetened Greek yogurt (or local curd) per meal for full energy scaling. No Grains $\cdot$ No Fillers $\cdot$ No Artificial Gums.
+  };
+  \node[anchor=south east,font=\sffamily\tiny] at (92mm,6mm){Batch: \underline{\hspace{18mm}} Mfg: \underline{\hspace{18mm}}};
+\end{tikzpicture}
+\end{document}

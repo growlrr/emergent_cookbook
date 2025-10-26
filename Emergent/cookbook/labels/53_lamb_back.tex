@@ -1,0 +1,29 @@
+% Suggested filename: 50_bottommeat_Lamb_Back_Label.tex
+\documentclass[10pt]{standalone}
+\usepackage[paperwidth=100mm,paperheight=100mm,margin=6mm]{geometry}
+\usepackage{fontspec}\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}\setmathfont{TeX Gyre Pagella Math}
+\usepackage{xcolor,tikz,tabularx}
+\pagestyle{empty}\renewcommand{\familydefault}{\sfdefault}
+\definecolor{lambdark}{rgb}{0.75,0.14,0.17}
+\colorlet{bandcolor}{lambdark}
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[white] (0,0) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,92mm) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,0) rectangle (100mm,8mm);
+  \node[anchor=north,font=\sffamily\bfseries\large] at (50mm,98mm){Growlrr CatCore --- Lamb Blend};
+  \node[anchor=north,align=center,text width=88mm,font=\sffamily\small] at (50mm,86mm) {
+    \textbf{Guaranteed Analysis (per 100 g)}\\[4pt]
+    Protein / Fat / Fiber / Moisture / Ash --- see appendix for canonical numbers.
+  };
+  \node[anchor=north,align=left,text width=88mm,font=\sffamily\footnotesize] at (50mm,58mm) {
+    \textbf{Ingredients (per pouch = 100 g):}\\[3pt]
+    Lamb muscle cuts (50 g), Kidney (13 g), Liver (2 g), Bone Broth (35 g portion), Egg yolk powder (if used), Encapsulated Ca-lactate (per canonical), Brewer's yeast (carrier ----- 640 mg), Tocopherols, Mineral premix, Sodium alginate (gel), Sunflower oil/lecithin (carriers).
+  };
+  \node[anchor=north,align=center,text width=86mm,font=\sffamily\tiny] at (50mm,28mm) {
+    \textbf{Claims:} No Grains $\cdot$ No Fillers $\cdot$ No Artificial Gums. Complementary food --- use Growlrr rotation chart. Retort sterilised, 18-month shelf life.
+  };
+  \node[anchor=south east,font=\sffamily\tiny] at (92mm,6mm){Batch: \underline{\hspace{18mm}} Mfg: \underline{\hspace{18mm}}};
+\end{tikzpicture}
+\end{document}

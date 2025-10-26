@@ -1,0 +1,174 @@
+% main.tex - Growlrr Pilot Binder (Clean Version)
+\documentclass[11pt,oneside]{book}
+
+% ========== LOAD CUSTOM STYLE ==========
+\usepackage{growlrr_style}
+
+% ========== BIBLIOGRAPHY SOURCE ==========
+\addbibresource{growlrr_bibliography.bib}
+
+% ========== PAGE NUMBERING ==========
+
+% ========== DOCUMENT START ==========
+\begin{document}
+
+% ========== TITLE PAGE ==========
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\Huge\bfseries Growlrr Foods}\\[0.5cm]
+{\Large Pilot Binder}\\[0.3cm]
+{\large Revision H.3.1.1}\\[2cm]
+{\large Date: 26-10-2025, Chennai, India}\\[0.3cm]
+{\large\itshape Formulations and Standard Operating Procedure for Pilot Run}\\[1cm]
+\vfill
+{\large Property of Growlrr Foods Pvt Ltd}\\[0.3cm]
+{\large Confidential and Proprietary - Not for circulation}\\[0.3cm]
+{\large Internal R\&D use only- Not for sale or distribution}\\[0.3cm]
+{\large Contact Information: https://www.growlrr.com}\\[0.3cm]
+\end{titlepage}
+
+% ========== FRONT MATTER (Roman numerals) ==========
+\frontmatter
+
+% ========== FRONT MATTER ==========
+
+\tableofcontents
+\clearpage
+
+\listoftables
+\clearpage
+
+% ========== INTRODUCTION CHAPTERS ==========
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\input{cookbook/introduction/01_abstract}
+\clearpage
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\input{cookbook/introduction/02_preface}
+\clearpage
+
+\chapter*{Executive Summary}
+\addcontentsline{toc}{chapter}{Executive Summary}
+\input{cookbook/introduction/03_executive_summary}
+\clearpage
+
+% ========== MAIN MATTER (Arabic numerals restart at 1) ==========
+\mainmatter
+
+\chapter{Why Growlrr Exists}
+\input{cookbook/introduction/04_problem_and_approach}
+\newpage
+
+\chapter{Introduction to CatCore}
+\input{cookbook/introduction/05a_introduction_catcore}
+\input{cookbook/introduction/05b_welcome_bella_ringo}
+
+\chapter{Introduction to DogCore}
+\input{cookbook/introduction/05c_introduction_dogcore}
+
+% ========== MAIN MATTER ==========
+\pagestyle{headings}
+
+% ========== FORMULATIONS ==========
+\chapter{Formulation Specifications}
+\input{cookbook/formulations/10_catcore}
+\chapter{DogCore Specifications}
+\input{cookbook/formulations/11_dogcore}
+\chapter{Premix Formulations}
+\input{cookbook/formulations/13_catpro_premix}
+\newpage
+\input{cookbook/formulations/15_dogpro_premix}
+\newpage
+\input{cookbook/formulations/12_alginate_gel_premix}
+\input{cookbook/formulations/18_antioxidant}
+\input{cookbook/formulations/18_palatant}
+\newpage
+
+
+
+% ========== QUALITY CONTROL - Raw Materials ==========
+\chapter{Quality Control --- Incoming Raw Materials Handling and COA}
+\input{cookbook/qc/28_incoming_raw_qc}
+
+% ========== QUALITY CONTROL - Premix ========== 
+\input{cookbook/qc/19_incoming_premix_qc}
+\chapter{Quality Control --- Incomming Premix Handling and COA}
+\input{cookbook/qc/20_catpro_coa}
+\newpage
+\input{cookbook/qc/21a_dogcore_coa}
+\input{cookbook/qc/21_dogpro_coa}
+\newpage
+\input{cookbook/qc/24_alginate_coa}
+\input{cookbook/qc/25_antioxidant_coa}
+\newpage
+\input{cookbook/qc/25_fishoil_coa}
+\newpage
+\input{cookbook/qc/25_palatant_coa}
+
+% ========== STANDARD OPERATING PROCEDURES ==========
+\chapter{Standard Operating Procedures}
+\input{cookbook/sop/30a_sop_retort_line_catcore}
+\input{cookbook/sop/30a_sop_retort_line_dogtcore}
+\input{cookbook/sop/31_sop_ph_qc}
+\input{cookbook/sop/31_sop_bonebroth}
+\input{cookbook/bom/bom-h}
+\input{cookbook/bom/bom-l}
+\input{cookbook/bom/bom-g}
+\input{cookbook/bom/bom-m}
+\input{cookbook/bom/bom-k}
+\input{cookbook/bom/bom-s}
+\chapter{SOP --- Sardine Handling and Peroxide Specifications}
+\input{cookbook/sop/29_sardine_spec}
+
+% ========== Regulatory Framework ==========
+\chapter{Regulatory Framework}
+\input{cookbook/sop/32_regulatory_note}
+\chapter{SKU0 --- Composite Reference Feed}
+\input{cookbook/formuations/18_sku0}
+\input{cookbook/sop/33_sku0_bom_sop}
+
+% ========== APPENDICES ==========
+\appendix
+\growlrrappendixformat
+\chapter{Standards, Assumptions \& Raw Ingredients}
+\input{cookbook/appendices/34_appendix_a0_catcorecap}
+\input{cookbook/appendices/34_appendix_a1_a3}
+\input{cookbook/appendices/34_appendix_a4_dogcorecap}
+\input{cookbook/appendices/35_a5_inorganic_audit}
+\input{cookbook/appendices/35_a6_organic_audit}
+\input{cookbook/appendices/35_a7_macronutrient}
+\chapter{Nutritional Systems Audit}
+\input{cookbook/appendices/36_appendix_b}
+\input{cookbook/appendices/37_appendix_b1}
+\input{cookbook/appendices/38_appendix_b2}
+\input{cookbook/appendices/39_appendix_b10}
+\input{cookbook/appendices/40_a8_daily_pairs}
+\input{cookbook/appendices/40_appendix_b3}
+\input{cookbook/appendices/41_appendix_b4}
+\input{cookbook/appendices/42_a11_dog_lanes}
+\input{cookbook/appendices/42_appendix_b5}
+\input{cookbook/appendices/43_appendix_b6}
+\input{cookbook/appendices/44_appendix_b7}
+\input{cookbook/appendices/45_appendix_b8}
+\input{cookbook/appendices/46_appendix_b9}
+
+% ========== Conclusion & Bill of Materials ==========
+\chapter{Conclusion \& Bill of Materials}
+\input{cookbook/47a_conclusion}
+\newpage
+\input{cookbook/bom/48_bom_master_plussku0}
+% ========== Labels ==========
+\chapter{Labels and Fliers}
+\newpage
+\input{cookbook/label_new_51h}
+\input{flierh} 
+
+% ========== BIBLIOGRAPHY ==========
+\printbibliography[heading=bibintoc,title={References}]
+
+\end{document}
+
+

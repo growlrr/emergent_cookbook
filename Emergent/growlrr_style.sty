@@ -1,0 +1,172 @@
+
+% growlrr_style.sty
+% Growlrr Pilot Binder - Style Package
+% Revision H.0.0
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{growlrr_style}[2025/10/08 Growlrr Pilot Binder Style]
+
+% ========== REQUIRED PACKAGES ==========
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{siunitx}
+\RequirePackage{fontspec}
+\RequirePackage{unicode-math}
+\RequirePackage[margin=20mm, top=25mm, bottom=25mm]{geometry}
+\RequirePackage{pdflscape}
+\RequirePackage{adjustbox}
+\RequirePackage{booktabs,tabularx,longtable,array,enumitem,microtype,graphicx}
+\RequirePackage[x11names,table]{xcolor}
+\RequirePackage{tikz}
+\RequirePackage{colortbl}
+\RequirePackage{titlesec}
+\RequirePackage{tocloft}
+\usepackage{enumitem}      % For [resume] in enumerate
+\usepackage{tikz}          % For flowchart
+\usetikzlibrary{positioning, shapes.geometric, arrows.meta}
+\usepackage{tabularx}      % For better tables
+\usepackage{booktabs}      % For professional table lines
+\usepackage{xcolor}        % For colored boxes
+% ========== BIBLIOGRAPHY ==========
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+
+\RequirePackage{hyperref}
+%\RequirePackage[style=apa,backend=biber]{biblatex}
+
+% TikZ libraries
+\usetikzlibrary{positioning, shapes.geometric, arrows.meta}
+
+% ========== FONTS =========
+% ========== FONTS ==========
+% Modern sans-serif (Inter)
+\setmainfont{Inter}
+ \defaultfontfeatures{Ligatures={TeX}}
+%\DisableLigatures{encoding = *, family = * }
+\setsansfont{Inter}
+\setmathfont{Latin Modern Math}
+
+% Classic serif (TeX Gyre Pagella) 
+%\setmainfont{TeX Gyre Pagella}
+%\defaultfontfeatures{Ligatures={TeX}}
+%\DisableLigatures{encoding = *, family = * }
+% \setmathfont{TeX Gyre Pagella Math}
+% Other available options:
+% \setmainfont{Lato}
+% \setmainfont{Roboto}
+% \setmainfont{Open Sans}
+% \setmainfont{Liberation Sans}
+
+% ========== PAGE LAYOUT ==========
+\linespread{1.05}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+% Widow/orphan control
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+
+% Better float placement
+\setlength{\textfloatsep}{1em plus 0.5em minus 0.3em}
+\setlength{\floatsep}{1em plus 0.5em minus 0.3em}
+\setlength{\intextsep}{1em plus 0.5em minus 0.3em}
+
+% Reduce overfull warnings
+\tolerance=3000
+\emergencystretch=15pt
+\hfuzz=1pt
+
+% ========== TABLE SETTINGS ==========
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.1}
+
+% Better handling of long tables
+\setlength{\LTpre}{0.5em}
+\setlength{\LTpost}{0.5em}
+\setlength{\LTcapwidth}{\textwidth}
+
+% ========== SECTION SPACING ==========
+% Reduced chapter top spacing to prevent empty pages
+\titlespacing*{\chapter}{0pt}{-50pt}{0.5em}
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{1ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 0.4ex minus 0.2ex}{0.8ex plus 0.2ex}
+\titlespacing*{\subsubsection}{0pt}{1ex plus 0.3ex minus 0.2ex}{0.5ex plus 0.2ex}
+
+% ========== SECTION FORMATTING ==========
+% Use Fira Sans Bold for headers (contrast with Light body text)
+\titleformat{\chapter}[display]
+  {\sffamily\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+  
+\titleformat{\section}
+  {\sffamily\Large\bfseries}{\thesection}{1em}{}
+  
+\titleformat{\subsection}
+  {\sffamily\large\bfseries}{\thesubsection}{1em}{}
+  
+\titleformat{\subsubsection}
+  {\sffamily\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% ========== TOC FORMATTING ==========
+\setlength{\cftbeforechapskip}{0.5em}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+% ========== LIST SETTINGS ==========
+\setlist{nosep, leftmargin=*, topsep=0.5em}
+
+% ========== COLOR DEFINITIONS ==========
+\definecolor{darkred}{HTML}{990000}
+\definecolor{lightblue}{HTML}{B3D9FF}
+\definecolor{darkblue}{HTML}{003366}
+\definecolor{lightbrown}{HTML}{D2B48C}
+\definecolor{darkbrown}{HTML}{8B4513}
+\definecolor{goldenorange}{HTML}{FFB347}
+\definecolor{yellow}{HTML}{FFD700} % a strong yellow
+\definecolor{lightred}{HTML}{FFB3B3}
+\definecolor{skuzerogray}{rgb}{0.86,0.88,0.90}
+\definecolor{heartlight}{rgb}{0.97,0.78,0.78}
+\definecolor{lambdark}{rgb}{0.75,0.14,0.17}
+\definecolor{liverlight}{rgb}{0.78,0.90,0.97}
+\definecolor{gizzarddark}{rgb}{0.55,0.35,0.17}
+\definecolor{kidneylight}{rgb}{0.84,0.73,0.61}
+\definecolor{fishdark}{rgb}{0.12,0.22,0.55}
+\definecolor{dogprogold}{rgb}{0.95,0.61,0.07}
+
+% ========== CUSTOM COMMANDS ==========
+\providecommand{\goodglyph}{\textcolor{Green4}{\rule{1.1ex}{1.1ex}}}
+\newcommand{\blacksquare}{\rule{1.2ex}{1.2ex}}
+
+% Custom column types
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+% Flag indicators
+\newcommand{\flagG}{\textcolor{green}{\ensuremath{\bullet}}}
+\newcommand{\flagY}{\textcolor{yellow}{\ensuremath{\bullet}}}
+\newcommand{\flagR}{\textcolor{red}{\ensuremath{\bullet}}}
+
+% ========== HYPERREF SETUP ==========
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkred,
+    urlcolor=darkblue,
+    citecolor=darkblue,
+    pdftitle={Growlrr Pilot Binder},
+    pdfauthor={Growlrr Foods R\&D Team},
+    pdfsubject={Regulatory and QA Dossier},
+    pdfkeywords={pet food, nutrition, AAFCO, FEDIAF},
+    bookmarksdepth=3,
+    bookmarksopen=true
+}
+
+% ========== APPENDIX FORMATTING ==========
+% Command to apply appendix-specific formatting
+\newcommand{\growlrrappendixformat}{%
+    \titleformat{\chapter}[display]
+        {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+    \titlespacing*{\chapter}{0pt}{-50pt}{0.5em}
+}
+
+\endinput
