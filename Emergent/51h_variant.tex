@@ -207,6 +207,14 @@
 % LaTeX has predefined font sizes from smallest to largest:
 % \tiny < \scriptsize < \footnotesize < \small < \normalsize < \large < \Large < \LARGE < \huge < \Huge
 %
+% SMALLER THAN \tiny:
+% There is no predefined size smaller than \tiny, but you can use custom sizes:
+% \fontsize{SIZE}{BASELINE}\selectfont
+% Examples:
+%   \fontsize{5}{6}\selectfont   (slightly smaller than \tiny)
+%   \fontsize{4}{5}\selectfont   (very small)
+%   \fontsize{3}{4}\selectfont   (extremely small, barely readable)
+%
 % HOW TO CHANGE FONT SIZE:
 % 1. Find the comment "% FONT SIZE:" above the block you want to change
 % 2. Locate the font size command (e.g., \tiny, \Large)
@@ -227,17 +235,28 @@
 %
 % EXAMPLE 3: Make Ingredients Text Smaller (if it overflows)
 % BEFORE: \tiny
-% AFTER:  \tiny  (keep as is, or use custom size like \fontsize{4}{5}\selectfont)
+% AFTER:  \fontsize{4}{5}\selectfont
+% NOTE: Replace "\tiny" with custom size command
+%
+% EXAMPLE 4: Using Custom Font Size
+% BEFORE: \begin{minipage}[t][12mm][t]{97mm}
+%         \tiny
+%         \textbf{INGREDIENTS:} ...
+% AFTER:  \begin{minipage}[t][12mm][t]{97mm}
+%         \fontsize{4}{5}\selectfont
+%         \textbf{INGREDIENTS:} ...
 %
 % TIPS:
 % - Always change font size in BOTH places: \node font= AND inside minipage
 % - If text overflows, use smaller font or reduce text content
-% - Test compile after each change: xelatex 51h_modified.tex
+% - Test compile after each change: xelatex 51h_variant.tex
 % - Box sizes are FIXED, so larger fonts may cause overflow
+% - Custom sizes (\fontsize) should be used sparingly as they may affect readability
 %
 % SAFE CHANGES (tested to fit):
 % - Top Band: \Large to \LARGE (bigger) or \large (smaller)
 % - All content boxes: \tiny to \scriptsize (slightly larger)
 % - Titles: \tiny to \scriptsize or \footnotesize
+% - Ingredients: \tiny to \fontsize{4}{5}\selectfont (if text is too long)
 %
 % ========================================================================
