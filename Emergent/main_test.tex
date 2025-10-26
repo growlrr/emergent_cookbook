@@ -1,0 +1,48 @@
+% main.tex - Test Version with 5 Fixed Files
+\documentclass[11pt,oneside]{book}
+
+% ========== LOAD CUSTOM STYLE ==========
+\usepackage{growlrr_style}
+
+% ========== BIBLIOGRAPHY SOURCE ==========
+\addbibresource{growlrr_bibliography.bib}
+
+% ========== DOCUMENT START ==========
+\begin{document}
+
+% ========== TITLE PAGE ==========
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\Huge\bfseries Growlrr Foods}\\[0.5cm]
+{\Large Pilot Binder - Test Compilation}\\[0.3cm]
+{\large Testing 5 Fixed Files}\\[2cm]
+\end{titlepage}
+
+\frontmatter
+\tableofcontents
+\clearpage
+
+\mainmatter
+
+% ========== TEST FILE 1: Alginate COA ==========
+\chapter{Test 1: Alginate COA}
+\input{cookbook/qc/24_alginate_coa}
+
+% ========== TEST FILE 2: Antioxidant COA ==========
+% \chapter{Test 2: Antioxidant COA}
+% \input{cookbook/qc/25_antioxidant_coa}
+
+% ========== TEST FILE 3: SOP Retort Line ==========
+% \chapter{Test 3: SOP Retort Line Catcore}
+% \input{cookbook/sop/30a_sop_retort_line_catcore}
+
+% ========== TEST FILE 4: BOM Master ==========
+% \chapter{Test 4: BOM Master Plus SKU0}
+% \input{cookbook/bom/48_bom_master_plussku0}
+
+% ========== TEST FILE 5: BOM-H ==========
+% \chapter{Test 5: BOM H}
+% \input{cookbook/bom/bom-h}
+
+\end{document}
