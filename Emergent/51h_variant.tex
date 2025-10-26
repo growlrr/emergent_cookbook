@@ -110,25 +110,15 @@
       growlrr.com/diet
     };
     
-    % Q2: Merged Top Box (replacing old Q2a + Q3 top)
-    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
-    \draw[black,line width=0.3pt] (27mm,107mm) rectangle (103mm,138mm);
-    \node[anchor=north,font=\sffamily\bfseries\footnotesize] at (65mm,136.5mm) {MERGED TOP SECTION};
+    % Q2-3: Fully Merged Box (one single box, full height)
+    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current), \fontsize{4}{5}\selectfont (smaller)
+    % For smaller than \tiny, use: \fontsize{4}{5}\selectfont or \fontsize{3}{4}\selectfont
+    \draw[black,line width=0.3pt] (27mm,75mm) rectangle (103mm,138mm);
+    \node[anchor=north,font=\sffamily\bfseries\footnotesize] at (65mm,136.5mm) {MERGED FULL SECTION};
     \node[anchor=north west,font=\sffamily\tiny,text width=73mm,align=left] at (28mm,132mm) {
-      \begin{minipage}[t][28mm][t]{73mm}
+      \begin{minipage}[t][58mm][t]{73mm}
       \tiny
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      \end{minipage}
-    };
-    
-    % Q3: Merged Bottom Box (replacing old Q2b + Q3 bottom)
-    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
-    \draw[black,line width=0.3pt] (27mm,75mm) rectangle (103mm,106mm);
-    \node[anchor=north,font=\sffamily\bfseries\footnotesize] at (65mm,104.5mm) {MERGED BOTTOM SECTION};
-    \node[anchor=north west,font=\sffamily\tiny,text width=73mm,align=left] at (28mm,100mm) {
-      \begin{minipage}[t][28mm][t]{73mm}
-      \tiny
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
       \end{minipage}
     };
     
