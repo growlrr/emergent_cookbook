@@ -1,6 +1,7 @@
 \contentsline {chapter}{\numberline {1}CatCore Formulation}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}DogCore Formulation}{6}{chapter.2}%
-\contentsline {chapter}{\numberline {9}Quality Control}{9}{chapter.9}%
-\contentsline {subsection}{COA --- Antioxidant Liquid Premix}{10}{section*.1}%
-\contentsline {chapter}{\numberline {10}Bill of Materials}{12}{chapter.10}%
-\contentsline {chapter}{\numberline {C}Appendix C}{17}{appendix.C}%
+\contentsline {chapter}{\numberline {2}Premix Formulations}{6}{chapter.2}%
+\contentsline {subsection}{CatPro v5 Premix (100 g packet)}{6}{section*.1}%
+\contentsline {chapter}{\numberline {9}Quality Control}{12}{chapter.9}%
+\contentsline {subsection}{COA --- Antioxidant Liquid Premix}{13}{section*.2}%
+\contentsline {chapter}{\numberline {10}Bill of Materials}{15}{chapter.10}%
+\contentsline {chapter}{\numberline {C}Appendix C}{20}{appendix.C}%
