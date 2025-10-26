@@ -1,0 +1,35 @@
+# QUICK START - Compile Instructions
+
+## Unzip and Compile
+
+```bash
+# 1. Unzip the package
+unzip Emergent_compile_ready.zip
+
+# 2. Navigate to the directory
+cd Emergent
+
+# 3. Compile (choose one option)
+
+# Option A: Quick compile (no bibliography)
+xelatex main.tex
+
+# Option B: Full compile (with bibliography)
+xelatex main.tex
+biber main
+xelatex main.tex
+xelatex main.tex
+```
+
+## Expected Result
+✅ **main.pdf** - 95-98 page document with no errors
+
+## Need Help?
+- See **README.md** for detailed instructions
+- See **COMPILATION_REPORT.md** for list of fixes applied
+- See **FIXES_SUMMARY.md** for quick reference
+
+## Requirements
+- XeLaTeX compiler
+- Inter font (install via `apt-get install fonts-inter`)
+- Biber (for bibliography processing)

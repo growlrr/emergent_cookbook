@@ -1,0 +1,26 @@
+% Suggested filename: 50_bottommeat_Gizzard_Front_Label.tex
+\documentclass[10pt]{standalone}
+\usepackage[paperwidth=100mm,paperheight=100mm,margin=6mm]{geometry}
+\usepackage{fontspec}\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}\setmathfont{TeX Gyre Pagella Math}
+\usepackage{xcolor,tikz}
+\pagestyle{empty}\renewcommand{\familydefault}{\sfdefault}
+\definecolor{gizzarddark}{rgb}{0.55,0.35,0.17}
+\colorlet{bandcolor}{gizzarddark}
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[white] (0,0) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,92mm) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,0) rectangle (100mm,8mm);
+  \node[anchor=north,font=\sffamily\bfseries\large] at (50mm,98mm){Growlrr CatCore --- Gizzard Blend};
+  \node[anchor=north,align=center,text width=86mm,font=\sffamily\small] at (50mm,86mm) {
+    \textit{Organ-forward $\cdot$ Textured $\cdot$ Rotation-ready}\\[4pt]
+    Gizzard-forward recipe with muscle & egg components for texture and mineral breadth.\\[4pt]
+    \textbf{No Grains $\cdot$ No Fillers $\cdot$ No Artificial Gums.}
+  };
+  \node[anchor=north,align=center,text width=84mm,font=\sffamily\small] at (50mm,48mm){
+    \textbf{Feeding Guide (see back label)}\\Feed ----- 2 pouches/day for a 4 kg cat. Visit: \texttt{www.growlrr.com/diet}
+  };
+  \node[anchor=south,font=\sffamily\tiny] at (50mm,12mm){Organ-forward nutrition $\cdot$ Species-segregated $\cdot$ Made with intent};
+\end{tikzpicture}
+\end{document}

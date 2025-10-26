@@ -1,0 +1,56 @@
+% Suggested filename: 50_bottommeat_SKU0_Back_Label_Slurry_Pilot.tex
+\documentclass[10pt]{standalone}
+\usepackage[paperwidth=100mm,paperheight=100mm,margin=6mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage{xcolor,graphicx,tikz,tabularx}
+\usepackage{microtype}
+\pagestyle{empty}
+\renewcommand{\familydefault}{\sfdefault}
+
+% === SKU0 color (neutral slate) ===
+\definecolor{skuzerogray}{rgb}{0.86,0.88,0.90}
+\colorlet{bandcolor}{skuzerogray}
+
+% === Locked pilot metadata (editable) ===
+\def\pilot_kcal{TBD}
+\def\pilot_notes{See Appendix: Pilot Run BOM and NABL test plan.}
+
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[white] (0,0) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,92mm) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,0) rectangle (100mm,8mm);
+
+  % Header
+  \node[anchor=north,font=\sffamily\bfseries\large,text=black] at (50mm,98mm)
+        {Growlrr --- SKU0 (Pilot Slurry)};
+
+  % Purpose block
+  \node[anchor=north,align=center,text width=88mm,font=\sffamily\small] at (50mm,86mm) {
+    \textbf{Purpose:} Single-batch composite slurry representing a full weekly rotation (Bella 14 pouch template scaled for pilot). Manufactured to provide a consistent matrix for: post-retort nutrient assays, heavy metal and contaminant screens, stability and shelf-life stress testing, and premix homogeneity validation.
+  };
+
+  % Ingredients \& premix note (comprehensive summary)
+  \node[anchor=north,align=left,text width=88mm,font=\sffamily\footnotesize] at (50mm,60mm) {
+    \textbf{Summary Ingredients (pilot composite --- per 9.8 kg blend prior to aliquot):}\\[3pt]
+    Composite of CatCore SKUs (Heart, Liver, Lamb, Gizzard, Kidney, Sardine) combined in canonical weekly rotation weights, homogenised in bone broth. Includes production-averaged premixes: CatPro, DogPro (where applicable), Pluto (weighted average per run), Chelator premix, Alg-Um gel premix, Tocopherol-Lecithin premix, Palatants A \Palatants A & C C. Brewer's yeast carrier retained in premixes. Two broth-only control pouches included for retort profile validation.
+  };
+
+  % Lab handling \& assay itinerary
+  \node[anchor=north,align=center,text width=88mm,font=\sffamily\small] at (50mm,30mm) {
+    \textbf{Lab handling \& assays (high level)}\\
+    Post-retort: NABL nutrient panel (protein, AA, vitamins A/D/E, taurine, Ca:P, Zn/Fe/Cu/I), heavy metals (ICP-MS), microbial panel, AOAC moisture \& fat, and accelerated shelf/oxidation tests. See Appendix A-Pilot for test matrix and sampling plan.
+  };
+
+  % Footer
+  \node[anchor=south,align=center,text width=88mm,font=\sffamily\tiny,text=black!70] at (50mm,10mm) {
+    NOT FOR RETAIL SALE --- Pilot / Regulatory sample only. Handle per QA instructions. Contact QA: qa@growlrr.com.
+  };
+
+  % tiny batch fields
+  \node[anchor=south east,font=\sffamily\tiny,text=black!60] at (96mm,6mm) {Batch: \underline{\hspace{18mm}}};
+\end{tikzpicture}
+\end{document}

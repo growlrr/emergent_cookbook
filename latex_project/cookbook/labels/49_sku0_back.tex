@@ -1,0 +1,49 @@
+% Suggested filename: 50_bottommeat_SKU0_Front_Label_Slurry_Pilot.tex
+\documentclass[10pt]{standalone}
+\usepackage[paperwidth=100mm,paperheight=100mm,margin=6mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage{xcolor,graphicx,tikz}
+\usepackage{microtype}
+\pagestyle{empty}
+\renewcommand{\familydefault}{\sfdefault}
+
+% === SKU0 color (neutral slate) ===
+\definecolor{skuzerogray}{rgb}{0.86,0.88,0.90}
+\colorlet{bandcolor}{skuzerogray}
+
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[white] (0,0) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,92mm) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,0) rectangle (100mm,8mm);
+
+  % Title
+  \node[anchor=north,font=\sffamily\bfseries\large,text=black] at (50mm,98mm)
+        {Growlrr --- SKU0 (Pilot Slurry)};
+
+  % Body (centered)
+  \node[anchor=north,align=center,text width=86mm,font=\sffamily\small] at (50mm,86mm) {
+    \textit{Pilot / Regulatory Blend $\cdot$ Whole-rotation Slurry}\\[4pt]
+    Composite puree produced by blending Bella's 14-pouch rotation (14 pouches = 1.4 kg; 7$\times$ = 9.8 kg pilot) into a single homogenised slurry for post-retort stability and NABL assay validation.\\[4pt]
+    \textbf{For laboratory, pilot, and regulator testing only --- Not for retail sale.}
+  };
+
+  % Short process note
+  \node[anchor=north,align=center,text width=86mm,font=\sffamily\small] at (50mm,56mm) {
+    Created to validate nutrient retention, premix distribution, and retort stability across a representative weekly rotation. Includes all Growlrr premixes at production-averaged dosing, and two broth control pouches for process checks.
+  };
+
+  % Instruction / pointer
+  \node[anchor=north,align=center,text width=86mm,font=\sffamily\small] at (50mm,40mm) {
+    See Appendix: Pilot Run BOM, Premix Weighting, Pluto averaging method, and NABL test plan. Contact QA: qa@growlrr.com for lab handling and assay scheduling.
+  };
+
+  % Footer
+  \node[anchor=south,align=center,text width=86mm,font=\sffamily\tiny,text=black!75] at (50mm,12mm) {
+    Pilot net wt ----- 100 g (per pouch aliquot) --- Retort-sterilised for assay stability. Batch ID: \underline{\hspace{25mm}} \quad Mfg Date: \underline{\hspace{25mm}}
+  };
+\end{tikzpicture}
+\end{document}
