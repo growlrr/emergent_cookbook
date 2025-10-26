@@ -218,6 +218,7 @@
     };
     
     % Bottom band with legal
+    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
     \fill[bandcolor] (0,0) rectangle (105mm,8mm);
     \node[anchor=center,font=\sffamily\tiny,text=black] at (52.5mm,5.5mm) {
       Batch: \underline{\hspace{18mm}} \quad Mfg: \underline{\hspace{18mm}}
@@ -229,3 +230,45 @@
   };
 \end{tikzpicture}
 \end{document}
+
+% ========================================================================
+% FONT SIZE ADJUSTMENT GUIDE - DETAILED EXAMPLE
+% ========================================================================
+%
+% LaTeX has predefined font sizes from smallest to largest:
+% \tiny < \scriptsize < \footnotesize < \small < \normalsize < \large < \Large < \LARGE < \huge < \Huge
+%
+% HOW TO CHANGE FONT SIZE:
+% 1. Find the comment "% FONT SIZE:" above the block you want to change
+% 2. Locate the font size command (e.g., \tiny, \Large)
+% 3. Replace it with a different size
+%
+% EXAMPLE 1: Make Top Band Title Bigger
+% BEFORE: \node[anchor=center,font=\sffamily\bfseries\Large,text=black]
+% AFTER:  \node[anchor=center,font=\sffamily\bfseries\LARGE,text=black]
+%
+% EXAMPLE 2: Make Guaranteed Analysis Table Larger
+% BEFORE: \node[anchor=north,font=\sffamily\tiny,text width=22mm...]
+%         \begin{minipage}[t][28mm][t]{22mm}
+%         \tiny
+% AFTER:  \node[anchor=north,font=\sffamily\scriptsize,text width=22mm...]
+%         \begin{minipage}[t][28mm][t]{22mm}
+%         \scriptsize
+% NOTE: Change BOTH occurrences (in \node and inside minipage)
+%
+% EXAMPLE 3: Make Ingredients Text Smaller (if it overflows)
+% BEFORE: \tiny
+% AFTER:  \tiny  (keep as is, or use custom size like \fontsize{4}{5}\selectfont)
+%
+% TIPS:
+% - Always change font size in BOTH places: \node font= AND inside minipage
+% - If text overflows, use smaller font or reduce text content
+% - Test compile after each change: xelatex 51h_modified.tex
+% - Box sizes are FIXED, so larger fonts may cause overflow
+%
+% SAFE CHANGES (tested to fit):
+% - Top Band: \Large to \LARGE (bigger) or \large (smaller)
+% - All content boxes: \tiny to \scriptsize (slightly larger)
+% - Titles: \tiny to \scriptsize or \footnotesize
+%
+% ========================================================================
