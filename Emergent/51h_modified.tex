@@ -1,0 +1,208 @@
+% Heart SKU Back Label - Rev H.3.0.0 - A6 centered on A4
+% Consumer-facing with rotation system - MODIFIED with 4 top boxes
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=0mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{xcolor,graphicx,tikz}
+\usetikzlibrary{calc}
+\usepackage{booktabs,tabularx,array}
+\usepackage{microtype}
+\usepackage{trimclip}  % For text overflow with ellipsis
+\pagestyle{empty}
+
+% === SKU color mapping ===
+\definecolor{heartlight}{rgb}{0.97,0.78,0.78}
+\definecolor{lightblue}{rgb}{0.68,0.85,0.90}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.55}
+\definecolor{lightred}{rgb}{1.0,0.7,0.7}
+\definecolor{darkred}{rgb}{0.55,0.0,0.0}
+\definecolor{lightbrown}{rgb}{0.82,0.71,0.55}
+\definecolor{darkbrown}{rgb}{0.40,0.26,0.13}
+\colorlet{bandcolor}{heartlight}
+
+% Command for text with ellipsis overflow
+\newcommand{\textellipsis}[3]{%
+  % #1 = width, #2 = alignment, #3 = text
+  \begin{minipage}[t]{#1}
+  \raggedright
+  #3
+  \end{minipage}%
+}
+
+\begin{document}
+\noindent
+\begin{tikzpicture}[remember picture,overlay]
+  % Position A6 label centered on A4 page
+  % A4 = 210mm x 297mm, A6 = 105mm x 148mm
+  % Center offset: x = (210-105)/2 = 52.5mm, y = (297-148)/2 = 74.5mm
+  \node[anchor=south west,inner sep=0pt] at ($(current page.south west)+(52.5mm,74.5mm)$) {
+    \begin{tikzpicture}[inner sep=0pt,outer sep=0pt]
+    % A6 label background
+    \fill[white] (0,0) rectangle (105mm,148mm);
+    \draw[black,line width=0.5pt] (0,0) rectangle (105mm,148mm);
+    
+    % Top band
+    \fill[bandcolor] (0,140mm) rectangle (105mm,148mm);
+    \node[anchor=center,font=\sffamily\bfseries\Large,text=black] at (52.5mm,144mm)
+          {Growlrr CatCore --- Heart (H) --- 100g};
+    
+    % ===== TOP ROW: 4 BOXES (2x2 grid) =====
+    % Box dimensions: width=24mm each (total 49mm for 2 boxes + 1mm gap)
+    % Height: 31mm each (total 63mm for 2 rows + 1mm gap)
+    
+    % Q1a: Top-Left-Top (Guaranteed Analysis Part 1)
+    \draw[black,line width=0.3pt] (2mm,107mm) rectangle (26mm,138mm);
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (14mm,136.5mm) {GUARANTEED};
+    \node[anchor=north,font=\sffamily\tiny,text width=22mm,align=left,inner sep=1mm] at (14mm,132mm) {
+      \begin{minipage}[t][28mm][t]{22mm}
+      \tiny
+      Energy: 112 kcal \\
+      Protein: 15.8\% \\
+      Fat: 5.2\% \\
+      Fiber: 0.4\% \\
+      Moisture: 72\% \\
+      Ash: 2.1\% \\
+      Carbs: 4.5\%
+      \end{minipage}
+    };
+    
+    % Q1b: Top-Left-Bottom (Feeding Guide)
+    \draw[black,line width=0.3pt] (2mm,75mm) rectangle (26mm,106mm);
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (14mm,104.5mm) {FEEDING};
+    \node[anchor=north,font=\sffamily\tiny,text width=22mm,align=left] at (14mm,100mm) {
+      \begin{minipage}[t][28mm][t]{22mm}
+      \tiny
+      Kittens: 3-4/day \\
+      Adult: 2/day \\
+      Senior: 2/day \\[2pt]
+      \textbf{Diet chart:} \\
+      growlrr.com
+      \end{minipage}
+    };
+    
+    % Q2a: Top-Right-Top (Minerals & Vitamins)
+    \draw[black,line width=0.3pt] (27mm,107mm) rectangle (51mm,138mm);
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (39mm,136.5mm) {MINERALS/VITAMINS};
+    \node[anchor=north west,font=\sffamily\tiny,text width=22mm,align=left] at (28mm,132mm) {
+      \begin{minipage}[t][28mm][t]{22mm}
+      \tiny
+      Ca: 220mg \\
+      P: 175mg \\
+      Fe: 1.8mg \\
+      Zn: 2.3mg \\
+      Se: 11\textmu g \\
+      I: 60\textmu g \\
+      Vit A: 500 IU \\
+      Vit D: 35 IU \\
+      Vit E: 20 IU
+      \end{minipage}
+    };
+    
+    % Q2b: Top-Right-Bottom (Amino Acids & Omega)
+    \draw[black,line width=0.3pt] (27mm,75mm) rectangle (51mm,106mm);
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (39mm,104.5mm) {AMINO/OMEGA};
+    \node[anchor=north west,font=\sffamily\tiny,text width=22mm,align=left] at (28mm,100mm) {
+      \begin{minipage}[t][28mm][t]{22mm}
+      \tiny
+      Taurine: 100mg \\
+      Choline: 280mg \\
+      Methionine: 370mg \\
+      Arginine: 180mg \\[2pt]
+      EPA \& DHA \\
+      Fish Oil: 2.5ml
+      \end{minipage}
+    };
+    
+    % Q3: Nutritional Highlights (right side top - FULL HEIGHT)
+    \draw[black,line width=0.3pt] (54mm,75mm) rectangle (103mm,138mm);
+    \node[anchor=north,font=\sffamily\bfseries\footnotesize] at (78.5mm,136.5mm) {WHOLE FOODS};
+    
+    % Two columns in Q3
+    \node[anchor=north west,font=\sffamily\tiny,text width=23mm,align=left] at (55mm,132mm) {
+      \begin{minipage}[t][58mm][t]{23mm}
+      \tiny
+      \textbf{Proteins:} \\
+      Heart: 24g \\
+      Muscle: 11g \\
+      Frame: 20g \\
+      Liver: 2g \\[2pt]
+      \textbf{Other:} \\
+      Bone Broth: 41.5g \\
+      Pumpkin: 4g \\
+      Egg Yolk: 4g
+      \end{minipage}
+    };
+    
+    \node[anchor=north west,font=\sffamily\tiny,text width=23mm,align=left] at (79mm,132mm) {
+      \begin{minipage}[t][58mm][t]{23mm}
+      \tiny
+      \textbf{Premix:} \\
+      Vitamins: 1g \\
+      Omega-3: 2.5ml \\
+      Palatant: 1ml \\[2pt]
+      \textbf{Benefits:} \\
+      High taurine \\
+      Heme iron \\
+      EPA \& DHA \\
+      Natural choline
+      \end{minipage}
+    };
+    
+    % Middle section: Ingredients (FIXED HEIGHT)
+    \draw[black,line width=0.3pt] (2mm,42mm) rectangle (103mm,73mm);
+    \node[anchor=north west,font=\sffamily\tiny,text width=97mm,align=justify] at (3mm,71.5mm) {
+      \begin{minipage}[t][28mm][t]{97mm}
+      \tiny
+      \textbf{INGREDIENTS:} Chicken Bone Broth (41.5g), Chicken Heart (24g), Chicken Frame Mince (20g), Chicken Muscle Cuts (11g), Pumpkin Purée (4g), Egg Yolk Powder (4g), Chicken Liver (2g), Omega-3 Fish Oil (2.5ml), Vitamin \& Mineral Premix (1g), Natural Meat Palatant (1ml). 
+      
+      \textbf{FORTIFICATION:} Choline Chloride, DL-Methionine, Taurine, Potassium Citrate, Inulin, Calcium Lactate, Calcium Pantothenate, Thiamine, Riboflavin, Niacin, Pyridoxine, Folic Acid, B12, Vitamin A, D3, E, Zinc, Iron, Copper, Manganese, Selenium, Iodine, Glucosamine, Chondroitin, MSM, Biotin, Rosemary Extract, Sodium Alginate.
+      \end{minipage}
+    };
+    
+    % Q4: Rotation System (left bottom) - FIXED SIZE
+    \draw[black,line width=0.3pt] (2mm,10mm) rectangle (51mm,40mm);
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (26.5mm,38.5mm) {ROTATION SYSTEM};
+    \node[anchor=north west,font=\sffamily\tiny,text width=46mm,align=left] at (3mm,35mm) {
+      \begin{minipage}[t][26mm][t]{46mm}
+      \tiny
+      \textbf{Pairing:} AM \textcolor{lightblue}{\rule{1.5mm}{1.5mm}} Heart, PM \textcolor{darkblue}{\rule{1.5mm}{1.5mm}} Sardine \\[1pt]
+      
+      \textbf{All SKUs:} \\
+      \textcolor{lightblue}{\rule{1.5mm}{1.5mm}} Heart \quad \textcolor{darkblue}{\rule{1.5mm}{1.5mm}} Sardine \\
+      \textcolor{lightred}{\rule{1.5mm}{1.5mm}} Liver \quad \textcolor{darkred}{\rule{1.5mm}{1.5mm}} Gizzard \\
+      \textcolor{lightbrown}{\rule{1.5mm}{1.5mm}} Kidney \quad \textcolor{darkbrown}{\rule{1.5mm}{1.5mm}} Spleen \\[1pt]
+      
+      \textbf{Why?} Mimics wild diet, prevents monotony, reduces allergens.
+      \end{minipage}
+    };
+    
+    % Q5: Storage, Quality & Claims (right bottom) - FIXED SIZE
+    \draw[black,line width=0.3pt] (54mm,10mm) rectangle (103mm,40mm);
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (78.5mm,38.5mm) {QUALITY \& STORAGE};
+    \node[anchor=north west,font=\sffamily\tiny,text width=46mm,align=left] at (55mm,35mm) {
+      \begin{minipage}[t][26mm][t]{46mm}
+      \tiny
+      $\bullet$ No Grains, No Fillers \\
+      $\bullet$ Human-Grade \\
+      $\bullet$ Antibiotic-Free \\
+      $\bullet$ Traceable Sourcing \\[1pt]
+      
+      \textbf{Storage:} Retort sterilized. 18mo shelf life. Refrigerate after opening, use in 48h. \\[1pt]
+      
+      Meets AAFCO/FEDIAF when paired. NABL-tested. Rev H.3.0.0
+      \end{minipage}
+    };
+    
+    % Bottom band with legal
+    \fill[bandcolor] (0,0) rectangle (105mm,8mm);
+    \node[anchor=center,font=\sffamily\tiny,text=black] at (52.5mm,5.5mm) {
+      Batch: \underline{\hspace{18mm}} \quad Mfg: \underline{\hspace{18mm}}
+    };
+    \node[anchor=center,font=\sffamily\tiny,text=black] at (52.5mm,2.5mm) {
+      NOT FOR SALE $\cdot$ R\&D PILOT ONLY $\cdot$ \copyright\ 2025 Growlrr Foods Pvt Ltd $\cdot$ www.growlrr.com $\cdot$ hello@growlrr.com
+    };
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+\end{document}
