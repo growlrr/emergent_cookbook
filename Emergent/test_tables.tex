@@ -1,0 +1,42 @@
+% Test file for table fixes
+\documentclass[11pt,oneside]{book}
+\usepackage{growlrr_style}
+\addbibresource{growlrr_bibliography.bib}
+
+\begin{document}
+
+\frontmatter
+\tableofcontents
+\listoftables
+
+\mainmatter
+
+% Chapter 5: Formulations - Table 5.1 likely in 10_catcore.tex
+\chapter{CatCore Formulation}
+\input{cookbook/formulations/10_catcore}
+
+% Chapter 6: More Formulations - Tables 6.6, 6.7 likely in 11_dogcore.tex  
+\chapter{DogCore Formulation}
+\input{cookbook/formulations/11_dogcore}
+
+% Skip to Chapter 9 for QC tables
+\setcounter{chapter}{8}
+
+% Chapter 9: QC - Tables 9.1, 9.2
+\chapter{Quality Control}
+\input{cookbook/qc/24_alginate_coa}
+\input{cookbook/qc/25_antioxidant_coa}
+
+% Tables 10, 11 might be in BOM files
+\setcounter{chapter}{9}
+\chapter{Bill of Materials}
+\input{cookbook/bom/48_bom_master_plussku0}
+\input{cookbook/bom/bom-h}
+
+% Appendix C
+\appendix
+\setcounter{chapter}{2}
+\chapter{Appendix C}
+\input{cookbook/appendices/34_appendix_a0_catcorecap}
+
+\end{document}
