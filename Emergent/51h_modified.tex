@@ -206,21 +206,35 @@
       \end{minipage}
     };
     
-    % Q4: Rotation System (left bottom) - EXPANDED HEIGHT
+    % Q4: All SKU Rotation Details (left bottom) - EXPANDED HEIGHT
     % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
     \draw[black,line width=0.3pt] (2mm,10mm) rectangle (51mm,56mm);
-    \node[anchor=north,font=\sffamily\bfseries\tiny] at (26.5mm,54.5mm) {ROTATION SYSTEM};
-    \node[anchor=north west,font=\sffamily\tiny,text width=46mm,align=left] at (3mm,51mm) {
-      \begin{minipage}[t][42mm][t]{46mm}
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (26.5mm,54.5mm) {ALL ROTATION SKUS};
+    \node[anchor=north,font=\sffamily\tiny,text width=46mm,align=center] at (26.5mm,50mm) {
+      \begin{minipage}[t][15mm][t]{46mm}
       \tiny
-      \textbf{Pairing:} AM \textcolor{lightblue}{\rule{1.5mm}{1.5mm}} Heart, PM \textcolor{darkblue}{\rule{1.5mm}{1.5mm}} Sardine \\[1pt]
-      
-      \textbf{All SKUs:} \\
-      \textcolor{lightblue}{\rule{1.5mm}{1.5mm}} Heart \quad \textcolor{darkblue}{\rule{1.5mm}{1.5mm}} Sardine \\
-      \textcolor{lightred}{\rule{1.5mm}{1.5mm}} Liver \quad \textcolor{darkred}{\rule{1.5mm}{1.5mm}} Gizzard \\
-      \textcolor{lightbrown}{\rule{1.5mm}{1.5mm}} Kidney \quad \textcolor{darkbrown}{\rule{1.5mm}{1.5mm}} Spleen \\[1pt]
-      
-      \textbf{Why?} Mimics wild diet, prevents monotony, reduces allergens.
+      \begin{tabular}{|l|l|}
+      \hline
+      \textcolor{lightblue}{\rule{1.5mm}{1.5mm}} Heart & \textcolor{darkblue}{\rule{1.5mm}{1.5mm}} Sardine \\
+      \hline
+      \textcolor{lightred}{\rule{1.5mm}{1.5mm}} Liver & \textcolor{darkred}{\rule{1.5mm}{1.5mm}} Gizzard \\
+      \hline
+      \textcolor{lightbrown}{\rule{1.5mm}{1.5mm}} Kidney & \textcolor{darkbrown}{\rule{1.5mm}{1.5mm}} Spleen \\
+      \hline
+      \end{tabular}
+      \end{minipage}
+    };
+    
+    % Why Rotate section
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (26.5mm,33mm) {WHY ROTATE?};
+    \node[anchor=north west,font=\sffamily\tiny,text width=46mm,align=left] at (3mm,29mm) {
+      \begin{minipage}[t][17mm][t]{46mm}
+      \tiny
+      $\bullet$ Mimics wild diet variety \\
+      $\bullet$ Prevents food monotony \\
+      $\bullet$ Reduces allergen buildup \\
+      $\bullet$ Balanced amino acid profile \\
+      $\bullet$ Complete nutrition over rotation
       \end{minipage}
     };
     
