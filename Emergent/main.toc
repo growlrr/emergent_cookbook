@@ -1,6 +1,6 @@
-\contentsline {chapter}{Abstract}{iii}{chapter*.1}%
-\contentsline {chapter}{Preface}{iv}{chapter*.2}%
-\contentsline {chapter}{Executive Summary}{v}{chapter*.3}%
+\contentsline {chapter}{Abstract}{iv}{chapter*.1}%
+\contentsline {chapter}{Preface}{v}{chapter*.2}%
+\contentsline {chapter}{Executive Summary}{vi}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}Why Growlrr Exists}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}The Problem with ``Complete \& Balanced``}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Our Approach}{2}{section.1.2}%
@@ -25,6 +25,7 @@
 \contentsline {chapter}{\numberline {11}Regulatory Framework}{59}{chapter.11}%
 \contentsline {chapter}{\numberline {12}SKU0 --- Composite Reference Feed}{62}{chapter.12}%
 \contentsline {chapter}{\numberline {A}Standards, Assumptions \& Raw Ingredients}{70}{appendix.A}%
-\contentsline {chapter}{\numberline {A}Nutritional Systems Audit}{82}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Conclusion \& Bill of Materials}{95}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Labels and Fliers}{101}{appendix.C}%
+\contentsline {chapter}{\numberline {A}Nutritional Systems Audit}{81}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Conclusion \& Bill of Materials}{94}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Labels and Fliers}{100}{appendix.C}%
+\contentsline {chapter}{References}{101}{appendix*.8}%
