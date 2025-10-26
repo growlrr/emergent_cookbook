@@ -1,0 +1,251 @@
+% Heart SKU Back Label - Rev H.3.0.0 - A6 centered on A4
+% Consumer-facing with rotation system - MODIFIED with 4 top boxes
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=0mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}  % Changed to available font
+\usepackage{xcolor,graphicx,tikz}
+\usetikzlibrary{calc}
+\usepackage{booktabs,tabularx,array}
+\usepackage{microtype}
+\pagestyle{empty}
+
+% === SKU color mapping ===
+\definecolor{heartlight}{rgb}{0.97,0.78,0.78}
+\definecolor{lightblue}{rgb}{0.68,0.85,0.90}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.55}
+\definecolor{lightred}{rgb}{1.0,0.7,0.7}
+\definecolor{darkred}{rgb}{0.55,0.0,0.0}
+\definecolor{lightbrown}{rgb}{0.82,0.71,0.55}
+\definecolor{darkbrown}{rgb}{0.40,0.26,0.13}
+\colorlet{bandcolor}{heartlight}
+
+\begin{document}
+\noindent
+\begin{tikzpicture}[remember picture,overlay]
+  % Position A6 label centered on A4 page
+  % A4 = 210mm x 297mm, A6 = 105mm x 148mm
+  % Center offset: x = (210-105)/2 = 52.5mm, y = (297-148)/2 = 74.5mm
+  \node[anchor=south west,inner sep=0pt] at ($(current page.south west)+(52.5mm,74.5mm)$) {
+    \begin{tikzpicture}[inner sep=0pt,outer sep=0pt]
+    % A6 label background
+    \fill[white] (0,0) rectangle (105mm,148mm);
+    \draw[black,line width=0.5pt] (0,0) rectangle (105mm,148mm);
+    
+    % Top band
+    % FONT SIZE: Change \Large to: \large (smaller), \Large (current), \LARGE (bigger)
+    \fill[bandcolor] (0,140mm) rectangle (105mm,148mm);
+    \node[anchor=center,font=\sffamily\bfseries\Large,text=black] at (52.5mm,144mm)
+          {Growlrr CatCore --- Heart (H) --- 100g};
+    
+    % ===== TOP ROW: 4 BOXES (2x2 grid) =====
+    % Box dimensions: width=24mm each (total 49mm for 2 boxes + 1mm gap)
+    % Height: 31mm each (total 63mm for 2 rows + 1mm gap)
+    
+    % Q1a: Top-Left-Top (Guaranteed Analysis Part 1)
+    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
+    % Box title font: Change first \tiny to \scriptsize for larger title
+    \draw[black,line width=0.3pt] (2mm,107mm) rectangle (26mm,138mm);
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (14mm,136.5mm) {GUARANTEED};
+    \node[anchor=north,font=\sffamily\tiny,text width=22mm,align=center,inner sep=1mm] at (14mm,131mm) {
+      \begin{minipage}[t][28mm][t]{22mm}
+      \tiny
+      \begin{tabular}{|l|r|}
+      \hline
+      Energy & 112 kcal \\
+      \hline
+      Protein & 15.8\% \\
+      \hline
+      Fat & 5.2\% \\
+      \hline
+      Fiber & 0.4\% \\
+      \hline
+      Moisture & 72\% \\
+      \hline
+      Ash & 2.1\% \\
+      \hline
+      Carbs & 4.5\% \\
+      \hline
+      \end{tabular}
+      \end{minipage}
+    };
+    
+    % Q1b: Top-Left-Bottom (Feeding Guide + Rotation System)
+    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
+    \draw[black,line width=0.3pt] (2mm,75mm) rectangle (26mm,106mm);
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (14mm,104.5mm) {FEEDING GUIDE};
+    \node[anchor=north,font=\sffamily\tiny,text width=22mm,align=center] at (14mm,100mm) {
+      \begin{minipage}[t][10mm][t]{22mm}
+      \tiny
+      \begin{tabular}{|l|r|}
+      \hline
+      Kittens & 3-4/day \\
+      \hline
+      Adult & 2/day \\
+      \hline
+      Senior & 2/day \\
+      \hline
+      \end{tabular}
+      \end{minipage}
+    };
+    
+    % Rotation System moved here
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (14mm,90mm) {ROTATION};
+    \node[anchor=north,font=\sffamily\tiny,text width=22mm,align=center] at (14mm,86.5mm) {
+      \begin{minipage}[t][10mm][t]{22mm}
+      \tiny
+      \begin{tabular}{|l|l|}
+      \hline
+      AM & \textcolor{lightblue}{\rule{1.2mm}{1.2mm}} Heart \\
+      \hline
+      PM & \textcolor{darkblue}{\rule{1.2mm}{1.2mm}} Sardine \\
+      \hline
+      \end{tabular}
+      \end{minipage}
+    };
+    
+    % Website at bottom
+    \node[anchor=north,font=\sffamily\tiny,text width=22mm,align=center] at (14mm,76.5mm) {
+      \textbf{Free diet chart:} \\
+      growlrr.com/diet
+    };
+    
+    % Q2: Merged Top Box (replacing old Q2a + Q3 top)
+    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
+    \draw[black,line width=0.3pt] (27mm,107mm) rectangle (103mm,138mm);
+    \node[anchor=north,font=\sffamily\bfseries\footnotesize] at (65mm,136.5mm) {MERGED TOP SECTION};
+    \node[anchor=north west,font=\sffamily\tiny,text width=73mm,align=left] at (28mm,132mm) {
+      \begin{minipage}[t][28mm][t]{73mm}
+      \tiny
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      \end{minipage}
+    };
+    
+    % Q3: Merged Bottom Box (replacing old Q2b + Q3 bottom)
+    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
+    \draw[black,line width=0.3pt] (27mm,75mm) rectangle (103mm,106mm);
+    \node[anchor=north,font=\sffamily\bfseries\footnotesize] at (65mm,104.5mm) {MERGED BOTTOM SECTION};
+    \node[anchor=north west,font=\sffamily\tiny,text width=73mm,align=left] at (28mm,100mm) {
+      \begin{minipage}[t][28mm][t]{73mm}
+      \tiny
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+      \end{minipage}
+    };
+    
+    % Middle section: Ingredients (REDUCED HEIGHT - HALF)
+    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
+    \draw[black,line width=0.3pt] (2mm,58mm) rectangle (103mm,73mm);
+    \node[anchor=north west,font=\sffamily\tiny,text width=97mm,align=justify] at (3mm,71.5mm) {
+      \begin{minipage}[t][12mm][t]{97mm}
+      \tiny
+      \textbf{INGREDIENTS:} Chicken Bone Broth (41.5g), Chicken Heart (24g), Chicken Frame Mince (20g), Chicken Muscle Cuts (11g), Pumpkin Purée (4g), Egg Yolk Powder (4g), Chicken Liver (2g), Omega-3 Fish Oil (2.5ml), Vitamin \& Mineral Premix (1g), Natural Meat Palatant (1ml). 
+      
+      \textbf{FORTIFICATION:} Choline Chloride, DL-Methionine, Taurine, Potassium Citrate, Inulin, Calcium Lactate, Calcium Pantothenate, Thiamine, Riboflavin, Niacin, Pyridoxine, Folic Acid, B12, Vitamin A, D3, E, Zinc, Iron, Copper, Manganese, Selenium, Iodine, Glucosamine, Chondroitin, MSM, Biotin, Rosemary Extract, Sodium Alginate.
+      \end{minipage}
+    };
+    
+    % Q4: All SKU Rotation Details (left bottom) - EXPANDED HEIGHT
+    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
+    \draw[black,line width=0.3pt] (2mm,10mm) rectangle (51mm,56mm);
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (26.5mm,54.5mm) {ALL ROTATION SKUS};
+    \node[anchor=north,font=\sffamily\tiny,text width=46mm,align=center] at (26.5mm,50mm) {
+      \begin{minipage}[t][15mm][t]{46mm}
+      \tiny
+      \begin{tabular}{|l|l|}
+      \hline
+      \textcolor{lightblue}{\rule{1.5mm}{1.5mm}} Heart & \textcolor{darkblue}{\rule{1.5mm}{1.5mm}} Sardine \\
+      \hline
+      \textcolor{lightred}{\rule{1.5mm}{1.5mm}} Liver & \textcolor{darkred}{\rule{1.5mm}{1.5mm}} Gizzard \\
+      \hline
+      \textcolor{lightbrown}{\rule{1.5mm}{1.5mm}} Kidney & \textcolor{darkbrown}{\rule{1.5mm}{1.5mm}} Spleen \\
+      \hline
+      \end{tabular}
+      \end{minipage}
+    };
+    
+    % Why Rotate section
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (26.5mm,33mm) {WHY ROTATE?};
+    \node[anchor=north west,font=\sffamily\tiny,text width=46mm,align=left] at (3mm,29mm) {
+      \begin{minipage}[t][17mm][t]{46mm}
+      \tiny
+      $\bullet$ Mimics wild diet variety \\
+      $\bullet$ Prevents food monotony \\
+      $\bullet$ Reduces allergen buildup \\
+      $\bullet$ Balanced amino acid profile \\
+      $\bullet$ Complete nutrition over rotation
+      \end{minipage}
+    };
+    
+    % Q5: Storage, Quality & Claims (right bottom) - EXPANDED HEIGHT
+    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
+    \draw[black,line width=0.3pt] (54mm,10mm) rectangle (103mm,56mm);
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (78.5mm,54.5mm) {QUALITY \& STORAGE};
+    \node[anchor=north west,font=\sffamily\tiny,text width=46mm,align=left] at (55mm,51mm) {
+      \begin{minipage}[t][42mm][t]{46mm}
+      \tiny
+      $\bullet$ No Grains, No Fillers \\
+      $\bullet$ Human-Grade \\
+      $\bullet$ Antibiotic-Free \\
+      $\bullet$ Traceable Sourcing \\[1pt]
+      
+      \textbf{Storage:} Retort sterilized. 18mo shelf life. Refrigerate after opening, use in 48h. \\[1pt]
+      
+      Meets AAFCO/FEDIAF when paired. NABL-tested. Rev H.3.0.0
+      \end{minipage}
+    };
+    
+    % Bottom band with legal
+    % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
+    \fill[bandcolor] (0,0) rectangle (105mm,8mm);
+    \node[anchor=center,font=\sffamily\tiny,text=black] at (52.5mm,5.5mm) {
+      Batch: \underline{\hspace{18mm}} \quad Mfg: \underline{\hspace{18mm}}
+    };
+    \node[anchor=center,font=\sffamily\tiny,text=black] at (52.5mm,2.5mm) {
+      NOT FOR SALE $\cdot$ R\&D PILOT ONLY $\cdot$ \copyright\ 2025 Growlrr Foods Pvt Ltd $\cdot$ www.growlrr.com $\cdot$ hello@growlrr.com
+    };
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+\end{document}
+
+% ========================================================================
+% FONT SIZE ADJUSTMENT GUIDE - DETAILED EXAMPLE
+% ========================================================================
+%
+% LaTeX has predefined font sizes from smallest to largest:
+% \tiny < \scriptsize < \footnotesize < \small < \normalsize < \large < \Large < \LARGE < \huge < \Huge
+%
+% HOW TO CHANGE FONT SIZE:
+% 1. Find the comment "% FONT SIZE:" above the block you want to change
+% 2. Locate the font size command (e.g., \tiny, \Large)
+% 3. Replace it with a different size
+%
+% EXAMPLE 1: Make Top Band Title Bigger
+% BEFORE: \node[anchor=center,font=\sffamily\bfseries\Large,text=black]
+% AFTER:  \node[anchor=center,font=\sffamily\bfseries\LARGE,text=black]
+%
+% EXAMPLE 2: Make Guaranteed Analysis Table Larger
+% BEFORE: \node[anchor=north,font=\sffamily\tiny,text width=22mm...]
+%         \begin{minipage}[t][28mm][t]{22mm}
+%         \tiny
+% AFTER:  \node[anchor=north,font=\sffamily\scriptsize,text width=22mm...]
+%         \begin{minipage}[t][28mm][t]{22mm}
+%         \scriptsize
+% NOTE: Change BOTH occurrences (in \node and inside minipage)
+%
+% EXAMPLE 3: Make Ingredients Text Smaller (if it overflows)
+% BEFORE: \tiny
+% AFTER:  \tiny  (keep as is, or use custom size like \fontsize{4}{5}\selectfont)
+%
+% TIPS:
+% - Always change font size in BOTH places: \node font= AND inside minipage
+% - If text overflows, use smaller font or reduce text content
+% - Test compile after each change: xelatex 51h_modified.tex
+% - Box sizes are FIXED, so larger fonts may cause overflow
+%
+% SAFE CHANGES (tested to fit):
+% - Top Band: \Large to \LARGE (bigger) or \large (smaller)
+% - All content boxes: \tiny to \scriptsize (slightly larger)
+% - Titles: \tiny to \scriptsize or \footnotesize
+%
+% ========================================================================
