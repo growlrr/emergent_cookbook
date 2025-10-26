@@ -1,0 +1,27 @@
+% Suggested filename: 50_bottommeat_Lamb_Front_Label.tex
+\documentclass[10pt]{standalone}
+\usepackage[paperwidth=100mm,paperheight=100mm,margin=6mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}\setmathfont{TeX Gyre Pagella Math}
+\usepackage{xcolor,tikz}
+\pagestyle{empty}\renewcommand{\familydefault}{\sfdefault}
+\definecolor{lambdark}{rgb}{0.75,0.14,0.17}
+\colorlet{bandcolor}{lambdark}
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[white] (0,0) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,92mm) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,0) rectangle (100mm,8mm);
+  \node[anchor=north,font=\sffamily\bfseries\large] at (50mm,98mm){Growlrr CatCore --- Lamb Blend};
+  \node[anchor=north,align=center,text width=86mm,font=\sffamily\small] at (50mm,86mm) {
+    \textit{Organ-forward $\cdot$ Bone-broth based $\cdot$ Rotation-ready}\\[4pt]
+    Lamb-forward muscle & organ blend for adult cats. Human-grade cuts for whole-prey nutrient breadth.\\[4pt]
+    \textbf{No Grains $\cdot$ No Fillers $\cdot$ No Artificial Gums.}
+  };
+  \node[anchor=north,align=center,text width=84mm,font=\sffamily\small] at (50mm,48mm){
+    \textbf{Feeding Guide (see back label)}\\Feed ----- 2 pouches/day for a 4 kg cat.\\Visit: \texttt{www.growlrr.com/diet}
+  };
+  \node[anchor=south,font=\sffamily\tiny] at (50mm,12mm){Organ-forward nutrition $\cdot$ Species-segregated $\cdot$ Made with intent};
+\end{tikzpicture}
+\end{document}

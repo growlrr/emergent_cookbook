@@ -1,0 +1,61 @@
+\subsection*{Appendix B2 --- Vitamin A (Retinol) Buffer Strategy\cite{ref4,ref5}}
+
+\textbf{Background:}  
+Vitamin A (retinol) is essential for vision, growth, reproduction, and epithelial integrity. Both deficiency and chronic oversupply (hypervitaminosis A) are clinically significant\cite{ref4}. Cats are uniquely sensitive to excess (bone/joint lesions reported on high-liver diets), while dogs tolerate a wider safety band. Regulatory compliance requires meeting AAFCO/FEDIAF floors while staying well below published ceilings.
+
+\textbf{Locked Premix Baseline (canonical):}  
+\begin{itemize}[leftmargin=1.2em]
+  \item CatPro \& DogPro supply \textbf{500 IU Vitamin A per pouch baseline}.  
+  \item This level is fixed for label compliance; it ensures \textbf{$\geq$5000 IU / 1000 kcal baseline} across all runs.  
+  \item Retort loss assumption: 25\%. Our compliance claim remains at pre-retort value (optics baseline).  
+\end{itemize}
+
+\textbf{Organ Contributions (design buffer):}  
+\begin{itemize}[leftmargin=1.2em]
+  \item Chicken liver: average 35,000 IU / 100 g raw (literature range 20,000--60,000).  
+  \item At 2.0 g inclusion/pouch $\rightarrow$ ~700 IU raw $\rightarrow$ ~525 IU post-retort (75\% retained).  
+  \item At 4.0 g inclusion/pouch $\rightarrow$ ~1400 IU raw $\rightarrow$ ~1050 IU post-retort.  
+  \item Egg yolk: ~300 IU/100 g; at 8 g inclusion $\rightarrow$ ~24 IU (negligible vs liver).  
+  \item Sardine \& tuna flesh: contain small natural retinol contributions, not significant compared to liver.  
+\end{itemize}
+
+\textbf{Retention Scenarios (IU / 1000 kcal):}
+
+\begin{tabular}{lrrr}
+\toprule
+Source & Baseline Premix & +2 g Liver & +4 g Liver \\
+\midrule
+Pre-retort & 5000 & 5700 & 6400 \\
+Post-retort (25\% loss premix; 25\% loss liver) & 3750 + 525 = 4275 & 3750 + 1050 = 4800 \\
+\bottomrule
+\end{tabular}
+
+\textbf{Ceilings and Safety Margins:}  
+\begin{itemize}[leftmargin=1.2em]
+  \item AAFCO cat/dog maximum = \textbf{40,000 IU / 1000 kcal}.  
+  \item Growlrr design lanes = \textbf{5,000--6,400 IU / 1000 kcal} (pre-retort).  
+  \item Even with obese-hen livers at 5$\times$ concentration (175,000 IU/100 g) and worst-case 4 g inclusion $\rightarrow$ ~8750 IU/pouch pre-retort = ~13,750 IU / 1000 kcal total (premix + liver). Still comfortably below ceiling.  
+\end{itemize}
+
+\textbf{Policy (canonical, frozen):}  
+\begin{enumerate}[leftmargin=1.2em]
+  \item \textbf{Premix baseline fixed:} 500 IU/pouch across CatPro \& DogPro (label compliance).  
+  \item \textbf{Liver layered buffer:} 2--4 g/pouch in rotation; not relied on for baseline compliance but provides resilience against retort loss and natural variability.  
+  \item \textbf{Pairing canon:} Sardine SKUs (0 g liver) are always paired with Liver SKUs (higher liver), flattening spikes and valleys.  
+  \item \textbf{Audit trigger:} internal review if any lane exceeds 20,000--30,000 IU / 1000 kcal.  
+  \item \textbf{Operational note:} DogCore contains \emph{no liver}. All retinol baseline supplied via DogPro premix.  
+\end{enumerate}
+
+\textbf{Deficiency Control:}  
+- Even with poor-quality poultry liver (80\% of literature average, 20,000 IU/100 g), 2 g inclusion yields ~300 IU $\rightarrow$ post-retort ~225 IU, leaving baseline premix intact.  
+- Chronic deficiency impossible unless premix is omitted in multiple consecutive runs (prevented by SOP and QC).  
+- Acute deficiency (overnight) not biologically plausible due to hepatic stores.
+
+\textbf{SOP insertion (batch record):}
+\begin{itemize}[leftmargin=1.2em]
+  \item Verify CatPro/DogPro COAs for Vitamin A IU/kg before dosing.  
+  \item Confirm dosing = 1 g/pouch premix; DogCore liver = 0 g by design.  
+  \item Record organ inclusion weights per SKU (audit-ready).  
+  \item Run IU budget per lane (premix IU + liver IU). Document margins vs ceiling.  
+  \item Confirm pairing logic in packaging (color-coded system).  
+\end{itemize}

@@ -1,0 +1,28 @@
+% Suggested filename: 50_bottommeat_Gizzard_Back_Label.tex
+\documentclass[10pt]{standalone}
+\usepackage[paperwidth=100mm,paperheight=100mm,margin=6mm]{geometry}
+\usepackage{fontspec}\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}\setmathfont{TeX Gyre Pagella Math}
+\usepackage{xcolor,tikz,tabularx}
+\pagestyle{empty}\renewcommand{\familydefault}{\sfdefault}
+\definecolor{gizzarddark}{rgb}{0.55,0.35,0.17}
+\colorlet{bandcolor}{gizzarddark}
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[white] (0,0) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,92mm) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,0) rectangle (100mm,8mm);
+  \node[anchor=north,font=\sffamily\bfseries\large] at (50mm,98mm){Growlrr CatCore --- Gizzard Blend};
+  \node[anchor=north,align=center,text width=88mm,font=\sffamily\small] at (50mm,86mm) {
+    \textbf{Guaranteed Analysis (per 100 g)}\\[4pt] Protein / Fat / Fiber / Moisture / Ash (see appendix).
+  };
+  \node[anchor=north,align=left,text width=88mm,font=\sffamily\footnotesize] at (50mm,58mm) {
+    \textbf{Ingredients (per pouch = 100 g):}\\[3pt]
+    Chicken Gizzard (25 g), Chicken Heart (10 g), Egg White Powder (8 g), Egg Yolk Powder (4 g), Pumpkin Purée (5 g), Lean chicken cuts (11 g), Liver (2 g), Bone Broth portion (35 g), Encapsulated Ca-lactate, Brewer's yeast (carrier ----- 640 mg), Tocopherols, Alginate gel premix, Sunflower oil.
+  };
+  \node[anchor=north,align=center,text width=86mm,font=\sffamily\tiny] at (50mm,28mm) {
+    \textbf{Claims:} No Grains $\cdot$ No Fillers $\cdot$ No Artificial Gums. Complementary food --- use Growlrr rotation. Retort-sterilised.
+  };
+  \node[anchor=south east,font=\sffamily\tiny] at (92mm,6mm){Batch: \underline{\hspace{18mm}} Mfg: \underline{\hspace{18mm}}};
+\end{tikzpicture}
+\end{document}

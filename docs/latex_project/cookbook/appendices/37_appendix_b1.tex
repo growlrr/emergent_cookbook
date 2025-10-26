@@ -1,0 +1,48 @@
+\subsection*{Appendix A1 --- Thiamine (B1) Retort Loss and Overage Policy\cite{ref7}}
+
+\textbf{Background:}  
+Thiamine (Vitamin B1) is the most labile water-soluble vitamin in retorted diets. Industry and NRC reports cite losses ranging from 25\% to 90\%, depending on F$_0$, pH, pouch fill, and matrix. Cats are uniquely sensitive to thiamine deficiency; thus, Growlrr adopts a conservative premix strategy.
+
+\textbf{Locked CatPro Spec (canonical):}  
+\begin{itemize}[leftmargin=1.2em]
+  \item CatPro provides thiamine = \textbf{0.19 g per 10 kg run} = 190 mg / 10 kg.
+  \item Batch = 100 pouches $\rightarrow$ 1.90 mg/pouch pre-retort.
+  \item AAFCO floor = 1.1 mg / 1000 kcal. With pouch $\approx$ 100 kcal $\rightarrow$ 0.11 mg/pouch required post-retort.
+\end{itemize}
+
+\textbf{Retention Scenarios (illustrative):}
+
+\begin{tabular}{lrrr}
+\toprule
+Assumed Retort Loss & Post-retort (mg/pouch) & Post-retort (mg/1000 kcal) & Margin vs AAFCO floor \\
+\midrule
+25\% loss & 1.43 & 14.3 & +1200\% \\
+40\% loss & 1.14 & 11.4 & +936\% \\
+80\% loss & 0.38 & 3.8 & +245\% \\
+90\% loss & 0.19 & 1.9 & +73\% \\
+\bottomrule
+\end{tabular}
+
+\textbf{Interpretation:}  
+Even under catastrophic 90\% loss, Growlrr CatPro delivers \textgreater 70\% margin over AAFCO minima. At realistic 25--40\% losses, retention is 8--12$\times$ above floor. This strategy eliminates risk of deficiency while avoiding unnecessary megadoses.
+
+\textbf{Policy (canonical, frozen):}
+\begin{enumerate}[leftmargin=1.2em]
+  \item CatPro thiamine premix is fixed at 0.19 g/10 kg run (1.9 mg/pouch pre-retort).  
+  \item Compliance assumption: 40\% conservative loss.  
+  \item QC: Pilot assays must confirm $\geq$60\% retention. If lower, adjust process or premix under change-control.  
+  \item Internal review trigger: if lane-normalised thiamine falls below 2 mg/1000 kcal post-retort.  
+\end{enumerate}
+
+\textbf{Why this matters:}  
+- Prevents deficiency in cats (neurologic signs, anorexia, death in weeks if untreated).  
+- Safe overages: B1 is water-soluble, with no practical toxicity.  
+- Aligns with AAFCO/FEDIAF/NRC guidance, provides optics of robustness, and ensures audit resilience.
+
+\textbf{SOP insertion (batch record):}
+\begin{itemize}[leftmargin=1.2em]
+  \item Verify premix COA for thiamine mg/kg.  
+  \item Confirm dosing = 100 g premix per 10 kg run.  
+  \item Record expected pre-retort and post-retort values in run sheet.  
+  \item Compare finished-product assay to design assumptions; log variance.  
+\end{itemize}

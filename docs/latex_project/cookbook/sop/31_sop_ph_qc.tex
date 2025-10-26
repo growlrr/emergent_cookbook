@@ -1,0 +1,48 @@
+% Suggested filename: cookbook/sop/31_sop_ph_qc.tex
+% Fixed: Removed standalone document wrapper - now a fragment for \input
+
+\section*{Broth Base pH Adjustment SOP -- Pre-Heating Step (3.0 kg batch)}
+
+\textbf{Scope:} pH adjustment of a 3.0 kg broth aliquot after weighing and prior to heating to 60\textdegree C. Target pH: \textbf{6.4--6.5} at 25\textdegree C.
+
+\subsection*{Approved reagents}
+\begin{itemize}[noitemsep,leftmargin=*]
+  \item Citric acid monohydrate, food-grade -- prepare \textbf{10\% w/v} solution (10 g / 100 mL) -- ``Citric 10\%``.
+  \item Sodium citrate dihydrate, food-grade -- prepare \textbf{10\% w/v} solution (10 g / 100 mL) -- ``Sodium Citrate 10\%``.
+  \item Potassium bicarbonate, food-grade -- prepare \textbf{5\% w/v} solution (5 g / 100 mL) -- ``K-Bicarb 5\%`` (alternative to sodium citrate).
+\end{itemize}
+
+\subsection*{Equipment \& PPE}
+Calibrated pH meter (25\textdegree C calibration), magnetic or overhead stirrer, 10 mL and 1 mL pipettes/syringes, gloves, goggles, lab coat.
+
+\subsection*{Procedure}
+\begin{enumerate}[leftmargin=*,noitemsep]
+  \item \textbf{Calibrate} pH meter at pH 7.00 and pH 4.00 at 25\textdegree C. Document on Form MAT-01A.
+  \item Place the 3.0 kg broth in mixing vessel; equilibrate to 25\textdegree C.
+  \item Measure and record initial pH: \textbf{pH\textsubscript{0}}.
+  \item If \textbf{pH\textsubscript{0}} is within 6.4--6.5: proceed to premix addition and sign MAT-01A.
+  \item If \textbf{pH\textsubscript{0} > 6.5}: add \textbf{Citric 10\%} in \textbf{1.0 mL} increments:
+    \begin{itemize}[noitemsep]
+      \item Add 1.0 mL, mix 60 s, measure pH, record.
+      \item Repeat until pH \(\in\) [6.4,6.5].
+      \item Control limit: if cumulative addition > 10 mL without reaching target, stop and call Floor Chemist; document deviation.
+    \end{itemize}
+  \item If \textbf{pH\textsubscript{0} < 6.4}: add \textbf{Sodium Citrate 10\%} (or \textbf{K-Bicarb 5\%}) in \textbf{1.0 mL} increments:
+    \begin{itemize}[noitemsep]
+      \item Add 1.0 mL, mix 60 s, measure pH, record.
+      \item Repeat until pH \(\in\) [6.4,6.5].
+      \item Control limit: if cumulative addition > 10 mL without reaching target, stop and call Floor Chemist; document deviation.
+    \end{itemize}
+  \item Once target achieved, record final pH: \textbf{pH\textsubscript{f}}, total reagent added, time, operator initials on Form MAT-01A. Only then add Chelator Premix.
+\end{enumerate}
+
+\subsection*{Notes}
+\begin{itemize}[noitemsep]
+  \item 1 mL of a 10\% solution = 0.10 g reagent; for 3.0 kg broth this is a small incremental change (~0.0033\% w/w), facilitating precise control.
+  \item Do not measure pH at 60\textdegree C for QC decisions; measure at 25\textdegree C.
+  \item If unusually large reagent volume is required, document and halt for technical review -- buffer capacity may indicate upstream raw variation.
+\end{itemize}
+
+\vspace{4mm}
+\noindent\textbf{Form MAT-01A (Broth Base pH Log):} Attach to batch record.\\
+\textbf{Operator:} \underline{\hspace{4cm}} \quad \textbf{Date/Time:} \underline{\hspace{3cm}}

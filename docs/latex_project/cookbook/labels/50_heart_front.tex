@@ -1,0 +1,53 @@
+% labelfront sku1 - light red - heart
+% Suggested filename: 50_bottommeat_Hearty_Front_Label_Final.tex
+\documentclass[10pt]{standalone}
+\usepackage[paperwidth=100mm,paperheight=100mm,margin=6mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage{xcolor,graphicx,tikz}
+\usepackage{microtype}
+\pagestyle{empty}
+\renewcommand{\familydefault}{\sfdefault}
+
+% === SKU color mapping ===
+\definecolor{heartlight}{rgb}{0.97,0.78,0.78} % light red band for Hearty (Heart SKU)
+\colorlet{bandcolor}{heartlight}
+
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  % background
+  \fill[white] (0,0) rectangle (100mm,100mm);
+
+  % top & bottom bands
+  \fill[bandcolor] (0,92mm) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,0) rectangle (100mm,8mm);
+
+  % product name (centered in top band)
+  \node[anchor=north,font=\sffamily\bfseries\large,text=black] at (50mm,98mm)
+        {Growlrr CatCore --- Hearty Blend};
+
+  % main text body, centered
+  \node[anchor=north,align=center,text width=86mm,font=\sffamily\small] at (50mm,86mm) {
+    \textit{Organ-forward $\cdot$ Bone-broth based $\cdot$ Rotation-ready}\\[4pt]
+    Heart-led chicken blend for adult cats.\\
+    Crafted from human-grade meats, balanced with vitamins, minerals, and taurine.\\[4pt]
+    \textbf{No Grains $\cdot$ No Fillers $\cdot$ No Artificial Gums.}
+  };
+
+  % feeding info
+  \node[anchor=north,align=center,text width=84mm,font=\sffamily\small] at (50mm,48mm) {
+    \textbf{Feeding Guide (see back label)}\\[2pt]
+    Feed ----- 2 pouches per day for a 4 kg cat (AM + PM).\\
+    Follow the Growlrr rotation chart for balanced weekly pairing.\\[3pt]
+    Visit: \texttt{www.growlrr.com/diet}\\
+    for personalised rotation plans.
+  };
+
+  % closing line
+  \node[anchor=south,align=center,text width=84mm,font=\sffamily\small,text=black!80] at (50mm,12mm) {
+    Organ-forward nutrition $\cdot$ Species-segregated formulations $\cdot$ Made with intent and integrity
+  };
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,189 @@
+\newpage
+% --- BEGIN: small local flag macros to replace emoji (paste at top of appendix files) ---
+\makeatletter
+\@ifpackageloaded{tikz}{}{%
+  \usepackage{tikz}%
+}
+% small colored box / circle macros to replace emojis (safe inside tables)
+\providecommand{\flagG}{\tikz[baseline=0.06em]{\fill[green!50!black] (0,0) rectangle (0.85ex,0.85ex);}{}}
+\providecommand{\flagY}{\tikz[baseline=0.06em]{\fill[yellow!70!black] (0,0) rectangle (0.85ex,0.85ex);}{}}
+\providecommand{\flagR}{\tikz[baseline=0.06em]{\fill[red!80!black] (0,0) rectangle (0.85ex,0.85ex);}{}}
+\providecommand{\flagGC}{\tikz[baseline=0.06em]{\fill[green!50!black] (0,0) circle (0.45ex);}{}}
+\makeatother
+% --- END ---
+
+\section*{Appendix B --- Nutrient Systems Audit}
+
+\subsection*{Appendix B1 --- The Cat Trinity: Thiamine, Choline, Taurine}
+
+\begin{center}
+\begin{minipage}{\textwidth}
+\begin{longtable}{l c c c c p{4.5cm}}
+\toprule
+Nutrient & Min & Max & Growlrr Range & Flag & Obs \\
+\midrule
+Thiamine (B1, mg/1000 kcal) & 1.1 & --- & 19--20 & \flagGC & Over-supplied; retort 70--90\% loss still safe \\
+Choline (mg/1000 kcal) & 600 & --- & 1650--1750 & \flagGC & Meets floor $\times$3; premix baseline \\
+Taurine (mg/1000 kcal) & 270 & --- & 500 & \flagGC & Stable with premix + organ redundancy \\
+\bottomrule
+\end{longtable}
+\end{minipage}
+\end{center}
+
+\noindent\textbf{Physiology \& Rationale:}  
+- Thiamine: cats cannot synthesize, deficiency historically fatal in canned diets. Neurological signs appear within weeks.  
+- Choline: essential for VLDL export; deficiency $\rightarrow$ fatty liver.  
+- Taurine: obligate requirement; deficiency $\rightarrow$ retinal degeneration, dilated cardiomyopathy.  
+
+\noindent\textbf{Growlrr Strategy:} Premix provides overage for B1 and taurine; yolk + heart provide choline buffer.  
+
+\noindent\textbf{Reg Note:} All well above AAFCO/FEDIAF floors; toxicity implausible.  
+
+---
+
+\subsection*{Appendix B2 --- Vitamins D and E}
+
+\begin{center}
+\begin{minipage}{\textwidth}
+\begin{longtable}{l c c c c p{4.5cm}}
+\toprule
+Nutrient & Min & Max & Growlrr Range & Flag & Obs \\
+\midrule
+Vitamin D (IU/1000 kcal) & 62.5 & 7500 & 1000--1200 & \flagGC & Sardine supplies baseline; premix stable \\
+Vitamin E (IU/1000 kcal) & 9.5 & --- & 200--250 & \flagGC & Tocopherol premix; antioxidant role \\
+\bottomrule
+\end{longtable}
+\end{minipage}
+\end{center}
+
+\noindent\textbf{Physiology:}  
+- Vitamin D regulates calcium metabolism; deficiency $\rightarrow$ rickets, toxicity $\rightarrow$ hypercalcemia.  
+- Vitamin E prevents lipid peroxidation; deficiency rare but risk in high-PUFA diets.  
+
+\noindent\textbf{Growlrr Strategy:} Sardine ensures natural Vit D, tocopherols are added at robust baseline.  
+
+\noindent\textbf{Reg Note:} Floors exceeded, toxicity margins safe.  
+
+---
+
+\subsection*{Appendix B3 --- Iodine}
+
+\begin{center}
+\begin{minipage}{\textwidth}
+\begin{longtable}{l c c c c p{4.5cm}}
+\toprule
+Nutrient & Min & Max & Growlrr Range & Flag & Obs \\
+\midrule
+Iodine (mg/1000 kcal) & 0.35 & 9.0 & 0.5--0.6 & \flagGC & Controlled via premix; seaweed avoided \\
+\bottomrule
+\end{longtable}
+\end{minipage}
+\end{center}
+
+\noindent\textbf{Physiology:} Central to thyroid hormone synthesis; both excess and deficiency $\rightarrow$ goiter, metabolic disease.  
+
+\noindent\textbf{Growlrr Strategy:} Chelated iodine in premix ensures stability, avoids raw variability.  
+
+\noindent\textbf{Reg Note:} Safely inside the narrow window.  
+
+---
+
+\subsection*{Appendix B4 --- Selenium, Zinc, Iron (The Trinity)}
+
+\begin{center}
+\begin{minipage}{\textwidth}
+\begin{longtable}{l c c c c p{4.5cm}}
+\toprule
+Nutrient & Min & Max & Growlrr Range & Flag & Obs \\
+\midrule
+Selenium (mg/1000 kcal) & 0.09 & 0.45 & 0.12 & \flagGC & Selenized yeast baseline \\
+Zinc (mg/1000 kcal) & 18.5 & 2000 & 20--22 & \flagGC & Stable; premix \\
+Iron (mg/1000 kcal) & 7.5 & --- & 8.5--11 & \flagGC & Heart, liver contribute naturally \\
+\bottomrule
+\end{longtable}
+\end{minipage}
+\end{center}
+
+\noindent\textbf{Physiology:}  
+- Se: critical antioxidant enzyme (GPx); toxicity = selenosis.  
+- Zn: enzyme cofactor; deficiency $\rightarrow$ skin lesions, poor growth.  
+- Fe: oxygen transport; overload rare in cats/dogs.  
+
+\noindent\textbf{Growlrr Strategy:} Balanced via premix and controlled organ inputs; no overload risk.  
+
+---
+
+\subsection*{Appendix B5 --- Calcium and Phosphorus System}
+
+\begin{center}
+\begin{minipage}{\textwidth}
+\begin{longtable}{l c c c c p{4.5cm}}
+\toprule
+Nutrient & Min & Max & Growlrr Range & Flag & Obs \\
+\midrule
+Calcium (mg/1000 kcal) & 1000 & 6500 & 1500--1700 (except sardine 2800) & \flagGC & Sardine diluted with tuna; pluto set \\
+Phosphorus (mg/1000 kcal) & 750 & 4000 & 1350--1450 & \flagGC & Stable in all SKUs \\
+Ca:P ratio & 1.1--2.0 & --- & 1.12--1.20 & \flagGC & Controlled via organ balance \\
+\bottomrule
+\end{longtable}
+\end{minipage}
+\end{center}
+
+\noindent\textbf{Physiology:} Skeletal health; imbalance $\rightarrow$ rickets, renal stress, stones.  
+
+\noindent\textbf{Growlrr Strategy:} Pluto premix calibrated (85 g/cat line, 110 g/dog line). Sardine balanced with tuna to prevent spikes.  
+
+---
+
+\subsection*{Appendix B6 --- Electrolytes (Na, K, Mg)}
+
+\begin{center}
+\begin{minipage}{\textwidth}
+\begin{longtable}{l c c c c p{4.5cm}}
+\toprule
+Nutrient & Min & Max & Growlrr Range & Flag & Obs \\
+\midrule
+Sodium (mg/1000 kcal) & 330 & --- & 500--600 & \flagGC & Safe buffer; prevents hyponatremia \\
+Potassium (mg/1000 kcal) & 1500 & --- & 2200--2500 & \flagGC & Heart, kidney high K; all green \\
+Magnesium (mg/1000 kcal) & 25 & 150 & 35--45 & \flagGC & Controlled; avoids struvite risk \\
+\bottomrule
+\end{longtable}
+\end{minipage}
+\end{center}
+
+\noindent\textbf{Physiology:}  
+- Na: nerve and muscle conduction.  
+- K: vital intracellular cation.  
+- Mg: urinary stone risk if high; deficiency $\rightarrow$ neuromuscular signs.  
+
+\noindent\textbf{Growlrr Strategy:} Natural ingredient balance (heart = K, kidney = Mg). Premix stabilizes baseline.  
+
+---
+
+\subsection*{Appendix B7 --- Macronutrients}
+
+\begin{center}
+\begin{minipage}{\textwidth}
+\begin{longtable}{l c c c c c c}
+\toprule
+SKU & kcal/pouch & Protein (g) & Fat (g) & Ash (g) & Water (g) & Obs \\
+\midrule
+Heart (H) & 100 & 9.5 & 3.2 & 1.2 & 82 & Lean; base SKU \\
+Liver (L) & 100 & 12.9 & 9.5 & 1.5 & 76 & Rich, higher fat \\
+Lamb (M) & 100 & 12.3 & 4.9 & 1.4 & 79 & Balanced red meat \\
+Kidney (K) & 100 & 14.9 & 5.2 & 1.6 & 77 & High protein \\
+Gizzard (G) & 100 & 12.5 & 6.5 & 1.3 & 78 & Balanced mid-fat \\
+Sardine+Tuna (S) & 100 & 13.2 & 6.8 & 1.8 & 75 & Omega-3 and protein \\
+DogCore (D) & 100 & 6.2 & 5.0 & 1.0 & 85 & Soy + whey + yolk profile \\
+\bottomrule
+\end{longtable}
+\end{minipage}
+\end{center}
+
+\noindent\textbf{Reg Note:} All macronutrient floors met. Variability across SKUs is a feature, not a flaw --- designed for rotation and --"whole diet--" approach.  
+
+---
+
+\noindent\textbf{Summary of Appendix Beta+:}  
+Every critical nutrient axis (water-soluble, fat-soluble, electrolytes, minerals, macros) is **green or flagOK**. Deficiency is structurally impossible in Growlrr--'s design. Toxicity is prevented by conservative ceilings, tuna dilution, and fixed premix baselines. Rotation smooths valleys and peaks while keeping compliance bulletproof.  
+

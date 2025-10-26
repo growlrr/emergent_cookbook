@@ -1,0 +1,91 @@
+% Suggested filename: 50_bottommeat_Hearty_Back_Label_Final.tex
+\documentclass[10pt]{standalone}
+\usepackage[paperwidth=100mm,paperheight=100mm,margin=6mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage{xcolor,graphicx,tikz}
+\usepackage{booktabs,tabularx}
+\usepackage{microtype}
+\pagestyle{empty}
+\renewcommand{\familydefault}{\sfdefault}
+
+% === SKU color mapping ===
+\definecolor{heartlight}{rgb}{0.97,0.78,0.78} % light red band for Hearty (Heart SKU)
+\colorlet{bandcolor}{heartlight}
+
+% === Locked values (per pouch = 100 g) ===
+\def\kcalPer100{120}
+\def\proteinPct{18.2}
+\def\fatPct{6.0}
+\def\fiberPct{0.5}
+\def\moisturePct{65}
+\def\ashPct{2.0}
+\def\carbPct{8.3}
+\def\calcium_mg{163}
+\def\iron_mg{1.5}
+\def\zinc_mg{2.25}
+\def\iodine_ug{150}
+\def\selenium_ug{10}
+\def\taurine_mg{50}
+\def\vitA_ug{900}
+\def\vitA_IU{3000}
+\def\vitD_ug{2.5}
+\def\vitD_IU{100}
+\def\vitE_mg{13.4}
+\def\vitE_IU{20}
+
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  % background
+  \fill[white] (0,0) rectangle (100mm,100mm);
+
+  % top & bottom bands
+  \fill[bandcolor] (0,92mm) rectangle (100mm,100mm);
+  \fill[bandcolor] (0,0) rectangle (100mm,8mm);
+
+  % Header title centered in top band
+  \node[anchor=north,font=\sffamily\bfseries\large,text=black] at (50mm,98mm)
+        {Growlrr CatCore --- Hearty Blend};
+
+  % --- Center block: Guaranteed analysis table ---
+  \node[anchor=north,align=center,text width=88mm,font=\sffamily\small] at (50mm,86mm) {
+    \textbf{Guaranteed Analysis (per 100 g)}\\[4pt]
+    \begin{tabular}{@{} l c l @{}}
+      Metabolizable energy & : & \kcalPer100\ kcal \\
+      Crude protein & : & \proteinPct\% \\
+      Crude fat & : & \fatPct\% \\
+      Crude fiber & : & \fiberPct\% \\
+      Moisture & : & \moisturePct\% \\
+      Ash & : & \ashPct\% \\
+      Carbohydrates & : & \carbPct\% \\
+    \end{tabular}
+  };
+
+  % --- Ingredients block ---
+  \node[anchor=north,align=left,text width=88mm,font=\sffamily\footnotesize] at (50mm,58mm) {
+    \textbf{Ingredients (per pouch = 100 g):}\\[3pt]
+    Bone Broth (30 g), Chicken Heart (32 g), Chicken Gizzard (22 g), Pumpkin Purée (5 g), Egg Yolk Powder (4 g), Chicken Liver (2 g), Encapsulated Calcium Lactate (800 mg ----- 160 mg available Ca), Spray-Dried Chicken Hydrolysate (1000 mg), Spray-Dried Whitefish Hydrolysate (1000 mg), Choline Chloride (280 mg), Taurine (50 mg), Mixed Tocopherols / Vitamin E (13.4 mg ----- 20 IU), Ascorbic Acid (50 mg), Sodium Alginate (50 mg), Fish Hydrolysate (30 mg), Calcium Catalyst (15 mg ----- 3 mg available Ca), Vitamin A (900 $\mu$g ----- 3,000 IU), Citric Acid (30 mg), Trisodium Citrate (12 mg), Niacin (2.5 mg), Thiamine (1.9 mg), Riboflavin (0.5 mg), Pyridoxine (0.5 mg), Zinc (2.25 mg), Iron (1.5 mg), Manganese (0.3 mg), Copper (150 $\mu$g), Iodine (150 $\mu$g), Selenium Yeast (10 $\mu$g ----- 0.01 mg Se), Vitamin D (2.5 $\mu$g ----- 100 IU), \textbf{Brewer's Yeast (640 mg)}, Sunflower Oil (50 mg), Sunflower Lecithin (20 mg).
+  };
+
+  % --- Vitamins & Minerals box (compact) ---
+  \node[anchor=north,align=center,text width=86mm,font=\sffamily\small] at (50mm,28mm) {
+    \textbf{Selected Nutrients (per 100 g)}\\[4pt]
+    Calcium (total available): \calcium_mg\ mg \quad Iron: \iron_mg\ mg \quad Zinc: \zinc_mg\ mg\\
+    Iodine: \iodine_ug\ $\mu$g \quad Selenium: \selenium_ug\ $\mu$g \quad Taurine: \taurine_mg\ mg\\
+    Vitamin A: \vitA_ug\ $\mu$g (----- \vitA_IU\ IU) \quad Vitamin D: \vitD_ug\ $\mu$g (----- \vitD_IU\ IU) \quad Vitamin E: \vitE_mg\ mg (----- \vitE_IU\ IU)
+  };
+
+  % footer area above bottom band: claims and QA note centered
+  \node[anchor=south,align=center,text width=88mm,font=\sffamily\tiny,text=black!80] at (50mm,10mm) {
+    \textbf{Product Claims:} No Grains $\cdot$ No Fillers $\cdot$ No Artificial Gums.\\
+    \textbf{Usage:} Complementary food for cats --- to be fed as part of a complete and balanced diet. Meets AAFCO/FEDIAF targets when used with Growlrr rotation.\\
+    \textbf{Storage \& Handling:} Retort-sterilised for 18-month shelf life. Refrigerate after opening; use within 48 hours.\\
+    \textbf{Quality:} Human-grade sourcing; incoming premixes subdivided into 100 g / 100 mL internal packs; post-retort QC includes seam integrity, weight verification, sensory checks, and NABL assays at pilot and design-freeze stages.
+  };
+
+  % small silent fields for batch/date area (keeps back label clean)
+  \node[anchor=south east,font=\sffamily\tiny,text=black!60] at (92mm,6mm) {Batch: \underline{\hspace{18mm}} \quad Mfg: \underline{\hspace{18mm}}};
+\end{tikzpicture}
+\end{document}
