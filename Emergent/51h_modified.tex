@@ -80,19 +80,44 @@
       \end{minipage}
     };
     
-    % Q1b: Top-Left-Bottom (Feeding Guide)
+    % Q1b: Top-Left-Bottom (Feeding Guide + Rotation System)
     % FONT SIZE: Change \tiny to: \scriptsize (larger), \tiny (current)
     \draw[black,line width=0.3pt] (2mm,75mm) rectangle (26mm,106mm);
-    \node[anchor=north,font=\sffamily\bfseries\tiny] at (14mm,104.5mm) {FEEDING};
-    \node[anchor=north,font=\sffamily\tiny,text width=22mm,align=left] at (14mm,100mm) {
-      \begin{minipage}[t][28mm][t]{22mm}
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (14mm,104.5mm) {FEEDING GUIDE};
+    \node[anchor=north,font=\sffamily\tiny,text width=22mm,align=center] at (14mm,100mm) {
+      \begin{minipage}[t][10mm][t]{22mm}
       \tiny
-      Kittens: 3-4/day \\
-      Adult: 2/day \\
-      Senior: 2/day \\[2pt]
-      \textbf{Diet chart:} \\
-      growlrr.com
+      \begin{tabular}{|l|r|}
+      \hline
+      Kittens & 3-4/day \\
+      \hline
+      Adult & 2/day \\
+      \hline
+      Senior & 2/day \\
+      \hline
+      \end{tabular}
       \end{minipage}
+    };
+    
+    % Rotation System moved here
+    \node[anchor=north,font=\sffamily\bfseries\tiny] at (14mm,90mm) {ROTATION};
+    \node[anchor=north,font=\sffamily\tiny,text width=22mm,align=center] at (14mm,86.5mm) {
+      \begin{minipage}[t][10mm][t]{22mm}
+      \tiny
+      \begin{tabular}{|l|l|}
+      \hline
+      AM & \textcolor{lightblue}{\rule{1.2mm}{1.2mm}} Heart \\
+      \hline
+      PM & \textcolor{darkblue}{\rule{1.2mm}{1.2mm}} Sardine \\
+      \hline
+      \end{tabular}
+      \end{minipage}
+    };
+    
+    % Website at bottom
+    \node[anchor=north,font=\sffamily\tiny,text width=22mm,align=center] at (14mm,76.5mm) {
+      \textbf{Free diet chart:} \\
+      growlrr.com/diet
     };
     
     % Q2a: Top-Right-Top (Minerals & Vitamins)
