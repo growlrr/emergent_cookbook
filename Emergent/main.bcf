@@ -2366,3 +2366,56 @@
     <bcf:citekey order="9" intorder="4">web77</bcf:citekey>
     <bcf:citekey order="9" intorder="5">web83</bcf:citekey>
     <bcf:citekey order="10" intorder="1">ref10</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">ref2</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">sardinecap</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">sardinecap</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">ref3</bcf:citekey>
+    <bcf:citekey order="14" intorder="2">web85</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">ref8</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">ref14</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">gopalakrishnan2019bonecomposition</bcf:citekey>
+    <bcf:citekey order="17" intorder="2">usdaFDCbone2021</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">fishbase_longiceps</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">fbm_poultry</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">gopalakrishnan2019bonecomposition</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">usdaFDCbone2021</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">gopalakrishnan2019bonecomposition</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">usdaFDCbone2021</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">gopalakrishnan2019bonecomposition</bcf:citekey>
+    <bcf:citekey order="22" intorder="2">usdaFDCbone2021</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">gopalakrishnan2019bonecomposition</bcf:citekey>
+    <bcf:citekey order="23" intorder="2">usdaFDCbone2021</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">ref64</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">ref3</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">ref3</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">USDA_FoodData_Central</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">AAFCO_2023</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">USDA_FoodData_Central</bcf:citekey>
+    <bcf:citekey order="29" intorder="2">Swanson2013</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">ref7</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">ref4</bcf:citekey>
+    <bcf:citekey order="31" intorder="2">ref5</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">ref4</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">ref6</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">ref64</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="none">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">intciteorder</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>
